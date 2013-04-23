@@ -16,7 +16,7 @@
 <div id="header">
 	<div id="logo">
 		<h1><a href="#"><span>CompluNews(Falta Logo)</span></a></h1>
-		<p>Designed By JS</p>
+		<p>Designed By Complunews</p>
 	</div>
 	<div id="menu">
 		<ul id="main">
@@ -43,7 +43,7 @@
 				<li>
 					<h2>Recent Comments</h2>
 					<ul>
-						<li><a href="#">JS</a> on <a href="#">Aqui irian los comentarios Twitter</a></li>
+						<li><a href="#">Complunews</a> on <a href="#">Aqui irian los comentarios Twitter</a></li>
 					</ul>
 				</li>
 				<li>
@@ -67,15 +67,15 @@
 		<div id="content">
 			<div class="post">
 				<h1 class="title"><a href="#">Bienvenidos a CompluNews!</a></h1>
-				<p class="byline">Posted on October 1st, 2013 by <a href="#">JS</a></p>
+				<p class="byline">Posted on October 1st, 2013 by <a href="#">Complunews</a></p>
 				<div class="entry">
-					<p><strong>CompluNews</strong> somos bla bla bla...diseñado por <a href="#">JS</a>. </p>
+					<p><strong>CompluNews</strong> somos bla bla bla...diseñado por <a href="#">Complunews</a>. </p>
 					<p class="links"><a href="#" class="more">Read More</a></p>
 				</div>
 			</div>
 			<div class="post">
 				<h2 class="title"><a href="#">Noticias</a></h2>
-				<p class="byline">Posted on October 1st, 2013 by <a href="#">JS</a></p>
+				<p class="byline">Posted on October 1st, 2013 by <a href="#">Complunews</a></p>
 				<div class="entry">
 				<p>Aqui ponemos las noticias y esas cosas </p>
 				<!-- 	<h3>An H3 Followed by a Blockquote:</h3>
@@ -201,7 +201,7 @@
 	<!-- end page -->
 </div>
 <div id="footer">
-	<p class="copyright">&copy;&nbsp;&nbsp;2013 All Rights Reserved &nbsp;&bull;&nbsp; Design by <a href="https://www.facebook.com/shortys.inc">JS</a>.</p>
+	<p class="copyright">&copy;&nbsp;&nbsp;2013 All Rights Reserved &nbsp;&bull;&nbsp; Design by Complunews .</p>
 </div>
 </body>
 </html>
