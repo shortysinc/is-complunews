@@ -1,0 +1,10 @@
+@CHARSET "utf-8";
+
+*{
+/*     background-image:url(wallpaper1024x768.png); */
+/*     background-color:#000000; */
+    background-image:url("http://strangeherring.files.wordpress.com/2013/05/keep_calm_and_carry_on_hd_widescreen_wallpapers_1920x1200.jpg");
+    color:#0000000;
+/*     background:url(WebContent/images/out.jpg); */
+    background-size: cover;
+}
