@@ -6,10 +6,10 @@ import is.Noticia;
 public interface UsuarioRegDao 
 {
 	boolean puntuarComentario(int puntuacion);
-	boolean cambiarContraseña(String newPass);
-	boolean añadirComentario(String newComentario);
+	boolean cambiarContrasenia(String newPass);
+	boolean aniadirComentario(String newComentario);
 	boolean valorarNoticia(int puntuacion);
-	boolean añadirNoticiaAFavoritos(Noticia noticia);
+	boolean aniadirNoticiaAFavoritos(Noticia noticia);
 	boolean cambiarDatos(Datos newDatos);
 	
 
