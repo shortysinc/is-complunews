@@ -8,32 +8,32 @@ public class UsuarioReg extends Usuario implements UsuarioRegDao
 	
 	@Override
 	public boolean puntuarComentario(int puntuacion) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 	@Override
-	public boolean cambiarContraseña(String newPass) {
-		// TODO Apéndice de método generado automáticamente
+	public boolean cambiarContrasenia(String newPass) {
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 	@Override
-	public boolean añadirComentario(String newComentario) {
-		// TODO Apéndice de método generado automáticamente
+	public boolean aniadirComentario(String newComentario) {
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 	@Override
 	public boolean valorarNoticia(int puntuacion) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 	@Override
-	public boolean añadirNoticiaAFavoritos(Noticia noticia) {
-		// TODO Apéndice de método generado automáticamente
+	public boolean aniadirNoticiaAFavoritos(Noticia noticia) {
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 	@Override
 	public boolean cambiarDatos(Datos newDatos) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 	

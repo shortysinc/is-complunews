@@ -57,9 +57,9 @@ public class Model implements IObservable{
 	public void eliminarUsuario(Usuario usuario){
 		
 	}
-	public void añadirNoticia(Noticia newNoticia) {
+	public void aniadirNoticia(Noticia newNoticia) {
 		Administrador admin = (Administrador)this.currentUser;
-		admin.añadirNoticia(newNoticia);
+		admin.aniadirNoticia(newNoticia);
 		this.notifyObserver(UpdateInfo.NewsAdded);
 		
 	}
@@ -127,12 +127,12 @@ public class Model implements IObservable{
 		notifyObserver(UpdateInfo.ValueComment);
 	}
 	
-	public void cambiarContraseña(String newPass) {
+	public void cambiarContrasenia(String newPass) {
 		
 		notifyObserver(UpdateInfo.ChangePassword);
 	}
 	
-	public void añadirComentario(String newComentario) {
+	public void aniadirComentario(String newComentario) {
 		
 		notifyObserver(UpdateInfo.AddComment);
 	}
@@ -142,7 +142,7 @@ public class Model implements IObservable{
 		notifyObserver(UpdateInfo.NewValue);
 	}
 	
-	public void añadirNoticiaAFavoritos(Noticia noticia) {
+	public void aniadirNoticiaAFavoritos(Noticia noticia) {
 		
 		notifyObserver(UpdateInfo.AddNewToFavorite);
 	}
