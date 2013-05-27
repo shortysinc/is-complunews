@@ -3,8 +3,9 @@ package tp.pr5.testprofesor;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
+import FactoryDao.testValidador.*;
+
 import tp.pr5.cityLoader.testprofesor.CityLoaderTest;
-import tp.pr5.instructions.testprofesor.*;
 import tp.pr5.items.testprofesor.*;
 
 
@@ -21,7 +22,7 @@ import tp.pr5.items.testprofesor.*;
 						CodeCardTest.class,
 						FuelTest.class,
 						GarbageTest.class,
-						DropInstructionTest.class,
+						AdministradorDaoTest.class,
 						HelpInstructionTest.class,
 						MoveInstructionTest.class,
 						OperateInstructionTest.class,
