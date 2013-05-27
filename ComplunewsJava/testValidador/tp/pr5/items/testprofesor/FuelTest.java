@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+import is.testValidador.MockCity;
+import is.testValidador.MockPlace;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,8 +14,6 @@ import tp.pr5.Direction;
 import tp.pr5.Place;
 import tp.pr5.RobotEngine;
 import tp.pr5.items.Fuel;
-import tp.pr5.testprofesor.MockCity;
-import tp.pr5.testprofesor.MockPlace;
 
 public class FuelTest {
 	private Fuel testItem;

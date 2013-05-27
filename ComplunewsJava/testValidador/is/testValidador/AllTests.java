@@ -1,18 +1,13 @@
-package tp.pr5.testprofesor;
+package is.testValidador;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-
-import FactoryDao.testValidador.*;
-
-import tp.pr5.cityLoader.testprofesor.CityLoaderTest;
-import tp.pr5.items.testprofesor.*;
 
 
 @RunWith(Suite.class) 
 
 @Suite.SuiteClasses( { 
-						ItemTest.class,
+						/*ItemTest.class,
 						ItemContainerTest.class,
 						PlaceTest.class,
 						StreetTest.class,
@@ -31,7 +26,7 @@ import tp.pr5.items.testprofesor.*;
 						RadarInstructionTest.class,
 						ScanInstructionTest.class,
 						TurnInstructionTest.class,
-						CityLoaderTest.class
+						CityLoaderTest.class*/
 					} ) 
 
 

@@ -2,6 +2,9 @@ package tp.pr5.items.testprofesor;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import is.testValidador.MockCodeCard;
+import is.testValidador.MockPlace;
+import is.testValidador.MockRobotEngine;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -14,9 +17,6 @@ import tp.pr5.Place;
 import tp.pr5.RobotEngine;
 import tp.pr5.Rotation;
 import tp.pr5.Street;
-import tp.pr5.testprofesor.MockCodeCard;
-import tp.pr5.testprofesor.MockPlace;
-import tp.pr5.testprofesor.MockRobotEngine;
 
 public class CodeCardTest {
 	private CodeCard testItem;
