@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="CnJsp">
+    <wb-module deploy-name="ComplunewsJsp">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="CnJsp"/>
-        <property name="java-output-path" value="/CnJsp/build/classes"/>
+        <property name="java-output-path" value="/ComplunewsJsp/build/classes"/>
+        <property name="context-root" value="ComplunewsJsp"/>
     </wb-module>
 </project-modules>
