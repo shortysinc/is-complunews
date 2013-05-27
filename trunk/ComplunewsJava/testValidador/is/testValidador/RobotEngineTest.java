@@ -1,4 +1,4 @@
-package tp.pr5.testprofesor;
+package is.testValidador;
 
 import static org.junit.Assert.assertEquals;
 

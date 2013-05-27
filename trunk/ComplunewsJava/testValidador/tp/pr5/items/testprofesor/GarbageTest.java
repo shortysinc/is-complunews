@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+import is.testValidador.MockCity;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +12,6 @@ import org.junit.Test;
 import tp.pr5.Direction;
 import tp.pr5.RobotEngine;
 import tp.pr5.items.Garbage;
-import tp.pr5.testprofesor.MockCity;
 
 public class GarbageTest {
 	private RobotEngine testPlayer;
