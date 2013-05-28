@@ -48,7 +48,9 @@ public class NoticiaTest {
 		String auxContenido ="blibliblibli";
 		Comentario auxComentario= new Comentario(auxIdUsuario, auxContenido);
 		//-------------------------------------------------------------------
+		
 		assertTrue("Se ha añadido correctamente el comentario", comentarios.add(comentario));
+		
 		contenido="blibliblibli";
 		idUsuario="oepmdz";
 		Comentario comentario2= new Comentario(idUsuario, contenido);
@@ -59,11 +61,11 @@ public class NoticiaTest {
 		while (it.hasNext())
 		{ 
 			Comentario aux= it.next();
-			boolean bool= aux.getIdUsuario().equalsIgnoreCase(auxComentario.getIdUsuario())&&aux.getContenido().equalsIgnoreCase(auxComentario.getContenido());
-			if (bool)
-				assertTrue("El comentario ya existe y no se añadira",bool);
+			boolean exist= aux.getIdUsuario().equalsIgnoreCase(auxComentario.getIdUsuario())&&aux.getContenido().equalsIgnoreCase(auxComentario.getContenido());
+			if (exist)
+				assertTrue("El comentario ya existe y no se añadira",exist);
 			else
-				assertFalse("El comentario ha sido añadido",bool);
+				assertFalse("El comentario ha sido añadido",exist);
 		}
 		//---------------------------------------------------------------------------------------
 		
@@ -77,29 +79,46 @@ public class NoticiaTest {
 		String auxContenido ="blibliblibli";
 		Comentario auxComentario= new Comentario(auxIdUsuario, auxContenido);
 		//-------------------------------------------------------------------
+		comentarios.add(comentario);
+		comentarios.add(auxComentario);
+		boolean remove=comentarios.remove(comentario);
+		if (remove)
+			assertTrue("Se ha borrado correctamente el elemento", remove);
+		else
+			assertFalse("No se ha borrado el elemento", remove);
 		
 	}
 
 	@Test
-	public void testAddItem() {
-		/*assertTrue("ERROR: The place is empty but addItem returns false", placeTest.addItem(new MockItem()));
-		assertFalse("ERROR: The place contains an item with the same id but addItem returns true", placeTest.addItem(new MockItem()));
-		assertTrue("ERROR: The place does not contain an item with the same id but addItem returns false", placeTest.addItem(new MockItem(MockItem.WRONG_NAME)));*/
+	public void testSetGetValorarNoticia() 
+	{
+		/**
+		 * En este test probamos los metodos: valorarNoticia, el setter y el getter
+		 */
+		int value;
+		boolean puntuacion;
+		assertTrue("Se ha añadido correctamente la valoracion", valoracion==3);
+		noticiaTest.setValoracion(3);
+		noticiaTest.valorarNoticia(3);
+		value=noticiaTest.getValoracion();
+		puntuacion=(value>0 && value<=5);
+		assertFalse ("No se ha valorado la noticia correctamente", puntuacion);
+		
+		noticiaTest.setValoracion(0);
+		noticiaTest.valorarNoticia(5);
+		value=noticiaTest.getValoracion();
+		puntuacion=(value>0 && value<=5);
+		assertTrue("Se ha valorado la noticia correctamente",puntuacion);
+		
+		
+		
+		
 	}
 
 	@Test
-	public void testPickItem() {
-		/*assertNull("ERROR: The place is empty but pickItem returns an object", placeTest.pickItem(MockItem.DEF_NAME));
-		Item testItem = new MockItem();
-		if (placeTest.addItem(testItem)) {
-			Item actualItem;
-			assertNull("ERROR: The place does not contain an item with this id but pickItem returns an object", placeTest.pickItem(MockItem.WRONG_NAME));
-			assertNotNull("ERROR: The place contains an item with this id but pickItem returns null", actualItem=placeTest.pickItem(MockItem.DEF_NAME));
-			assertEquals("ERROR: The place contains an item with this id but pickItem returns null", testItem, actualItem);			
-		}
-		else {
-			fail("ERROR: addItem is not working properly. Try first addItem tests");
-		}*/
+	public void testAnadirEtiqueta() 
+	{
+		
 	}
 	
 	@Test
