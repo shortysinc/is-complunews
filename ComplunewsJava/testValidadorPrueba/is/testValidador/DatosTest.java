@@ -15,6 +15,7 @@ public class DatosTest {
 	private String descripcion;
 	private String sexo;
 	private Datos datosTest;
+	private String name; 
 	@Before
 	public void setUp() throws Exception 
 	{
@@ -44,8 +45,17 @@ public class DatosTest {
 	@Test
 	public void testGetSetNombre() 
 	{
-		/*assertTrue("ERROR: the place name does not appear in the string", placeTest.toString().contains(placeName));
-		assertTrue("ERROR: the place description does not appear in the string", placeTest.toString().contains(placeDescription));*/
+		String aux= name= datosTest.getNombre();
+		assertNotNull("Se ha creado correctamente el id de usuario"+ name, name);
+		datosTest.setNombre(null);
+		name=datosTest.getNombre();
+		assertNull("Se ha creado un nombre con null", name);
+		//Por el contrario si no fuese null, habria un error
+		//assertNotNull("Se ha creado un nombre con null", name);
+		datosTest.setNombre("Lars");
+		name=datosTest.getNombre();
+		assertFalse("El nombre ha cambiado correctamente",name.equalsIgnoreCase(aux));
+		
 	}
 
 	@Test
@@ -53,6 +63,7 @@ public class DatosTest {
 	{
 		/*assertTrue("ERROR: The place is empty but addItem returns false", placeTest.addItem(new MockItem()));
 		assertFalse("ERROR: The place contains an item with the same id but addItem returns true", placeTest.addItem(new MockItem()));
+	bc
 		assertTrue("ERROR: The place does not contain an item with the same id but addItem returns false", placeTest.addItem(new MockItem(MockItem.WRONG_NAME)));*/
 	}
 
