@@ -27,6 +27,16 @@ import org.junit.runners.Suite;
 						ScanInstructionTest.class,
 						TurnInstructionTest.class,
 						CityLoaderTest.class*/
+						AdministradorTest.class,
+						CategoriasTest.class,
+						ComentarioTest.class,
+						DatosTest.class,
+						EtiquetasTest.class,
+						NoticiaTest.class,
+						UsuarioNoRegTest.class,
+						UsuarioRegTest.class,
+						UsuarioTest.class,
+						
 					} ) 
 
 
