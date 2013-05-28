@@ -3,9 +3,12 @@ package is.testValidador;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import org.junit.Before;
 import org.junit.Test;
+
+
 import is.*;
 
 public class NoticiaTest {
@@ -17,29 +20,64 @@ public class NoticiaTest {
 	private ArrayList<Etiquetas> etiquetas;
 	private Categorias categorias;
 	private Noticia noticiaTest;
+	private Comentario comentario;
+	private String idUsuario;
 
 	@Before
 	public void setUp() throws Exception {
-		/*placeName = "place name";
-		placeDescription = "place description";
-		placeTest = new Place(placeName, false, placeDescription);   */
+		
+		titulo= "Los recortes en la educacion";
+		contenido= "blablablabla";
+		categorias= Categorias.Economia;
+		comentarios= new ArrayList<Comentario>();
+		valoracion=3;
+		idUsuario="pepe";
+		etiquetas= new ArrayList<Etiquetas>();
+		comentario= new Comentario(idUsuario, contenido);
 		noticiaTest = new Noticia(titulo, contenido, categorias);
 		
 		
 	}
 
 	@Test
-	public void testIsSpaceship() {
-		/*assertFalse("ERROR: We have created a place that does not represent a spaceship but isSpaceship returns true",placeTest.isSpaceship());
-		// Change the place
-		placeTest = new Place("", true, "");
-		assertTrue("ERROR: We have created a place that represents a spaceship but isSpaceship returns false",placeTest.isSpaceship());*/
+	public void testAnadirComentario() 
+	{
+		//Comentario Auxiliar
+		//-------------------------------------------------------------------
+		String auxIdUsuario ="oepmdz";
+		String auxContenido ="blibliblibli";
+		Comentario auxComentario= new Comentario(auxIdUsuario, auxContenido);
+		//-------------------------------------------------------------------
+		assertTrue("Se ha añadido correctamente el comentario", comentarios.add(comentario));
+		contenido="blibliblibli";
+		idUsuario="oepmdz";
+		Comentario comentario2= new Comentario(idUsuario, contenido);
+		assertTrue("Se ha añadido correctamente el comentario", comentarios.add(comentario2));
+		
+		//---------------------------------------------------------------------------------------
+		Iterator<Comentario> it= comentarios.iterator();
+		while (it.hasNext())
+		{ 
+			Comentario aux= it.next();
+			boolean bool= aux.getIdUsuario().equalsIgnoreCase(auxComentario.getIdUsuario())&&aux.getContenido().equalsIgnoreCase(auxComentario.getContenido());
+			if (bool)
+				assertTrue("El comentario ya existe y no se añadira",bool);
+			else
+				assertFalse("El comentario ha sido añadido",bool);
+		}
+		//---------------------------------------------------------------------------------------
+		
 	}
 
 	@Test
-	public void testToString() {
-		/*assertTrue("ERROR: the place name does not appear in the string", placeTest.toString().contains(placeName));
-		assertTrue("ERROR: the place description does not appear in the string", placeTest.toString().contains(placeDescription));*/
+	public void testEliminarComentario() {
+		//Comentario Auxiliar
+		//-------------------------------------------------------------------
+		String auxIdUsuario ="oepmdz";
+		String auxContenido ="blibliblibli";
+		Comentario auxComentario= new Comentario(auxIdUsuario, auxContenido);
+		//-------------------------------------------------------------------
+		
 	}
 
 	@Test
