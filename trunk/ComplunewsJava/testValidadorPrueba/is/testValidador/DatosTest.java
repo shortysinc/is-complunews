@@ -97,10 +97,30 @@ public class DatosTest {
 	@Test
 	public void testGetSetDescripcion() {
 	
+		String aux=description= datosTest.getDescripcion();
+		assertNotNull("La descripcion se ha creado correctamente", description);
+		
+		datosTest.setDescripcion(null);
+		birthDate=datosTest.getDescripcion();
+		assertNull("Se ha creado un objeto null", lastName);
+		
+		datosTest.setDescripcion("Hola, buenas tardes");
+		description= datosTest.getDescripcion();
+		assertFalse("El descripcion ha cambiado correctamente", description.equalsIgnoreCase(aux));
 	}
 	
 	@Test
-	public void testGetSetSexo() {
-	
+	public void testGetSetSexo() 
+	{
+		String aux=sex= datosTest.getSexo();
+		assertNotNull("La sexo se ha creado correctamente", sex);
+		
+		datosTest.setSexo(null);
+		sex=datosTest.getSexo();
+		assertNull("Se ha creado un objeto null", lastName);
+		
+		datosTest.setSexo("Mujer");
+		sex= datosTest.getSexo();
+		assertFalse("El Sexo ha cambiado correctamente", sex.equalsIgnoreCase(aux));
 	}
 }
