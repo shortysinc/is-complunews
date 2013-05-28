@@ -15,7 +15,8 @@ public class DatosTest {
 	private String descripcion;
 	private String sexo;
 	private Datos datosTest;
-	private String name,lastName; 
+	//auxiliar
+	private String name,lastName,birthDate,description,sex; 
 	@Before
 	public void setUp() throws Exception 
 	{
@@ -81,7 +82,16 @@ public class DatosTest {
 	@Test
 	public void testGetSetFechaNac() 
 	{
+		String aux=birthDate= datosTest.getFechaNac();
+		assertNotNull("El Fecha de nacimiento se ha creado correctamente", birthDate);
 		
+		datosTest.setFechaNac(null);
+		birthDate=datosTest.getFechaNac();
+		assertNull("Se ha creado un objeto null", lastName);
+		
+		datosTest.setFechaNac("23/07/1982");
+		birthDate= datosTest.getFechaNac();
+		assertFalse("El Fecha de Nacimiento ha cambiado correctamente", birthDate.equalsIgnoreCase(aux));
 	}
 	
 	@Test
