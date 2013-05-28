@@ -9,6 +9,8 @@ public class Administrador extends UsuarioReg implements AdministradorDao
 		super(idUsuario);
 		
 	}
+	
+	
 
 	@Override
 	public boolean anadirNoticia(Noticia newNoticia) {
