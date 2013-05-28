@@ -40,36 +40,58 @@ public class ComentarioTest {
 	@Test
 	public void testGetIdUsuario() 
 	{
-		//Usuario 1
+		//Usuario 1 sin fallos
 		comment = new Comentario("pepe", "miau");
-		assertTrue ("usuario y contenido correcto", comment.getIdUsuario()==usuario1 && comment.getContenido()==contenido1);
+		assertTrue ("usuario y contenido correcto", comment.getIdUsuario().equalsIgnoreCase(usuario1));
 		
-		//Usuario 2 con fallo en contenido
-		comment = new Comentario("oscar", "hola");
-		assertTrue("Usuario con fallo en contenido", comment.getIdUsuario()==usuario2 && comment.getContenido()==contenido2);
+		//Usuario 2 con fallo
+		comment = new Comentario("ruben", "hola");
+		assertTrue("Usuario con fallo en contenido", comment.getIdUsuario().equalsIgnoreCase(usuario2));
 		
 		//Usuario 3 con fallo en usuario
-		comment = new Comentario("Ane", "rolf");
-		assertFalse("Usuario con fallo en usuario", comment.getIdUsuario()==usuario3 && comment.getContenido()==contenido3);
+		comment = new Comentario("ana", "rolf");
+		assertFalse("Usuario con fallo en usuario", comment.getIdUsuario().equalsIgnoreCase(usuario3));
 		
 		
 	}
 
 	@Test
-	public void testToString() {
+	public void testSetIdUsuario() 
+	{
 		/*assertTrue("ERROR: the place name does not appear in the string", placeTest.toString().contains(placeName));
 		assertTrue("ERROR: the place description does not appear in the string", placeTest.toString().contains(placeDescription));*/
+		/*
+		 Card card = new Card();  
+        card.setNativeWord("test");  
+        assertTrue(card.getNativeWord() == "test");
+		 */
+		String nombreCorrecto = "Andres";
+		String nombreIncorrecto = "Javi";
+		comment = new Comentario("","");
+		comment.setIdUsuario(nombreCorrecto);
+		assertTrue("Ha cambiado el Id usuario correctamente", comment.getIdUsuario().equalsIgnoreCase(nombreCorrecto));
+		comment.setIdUsuario(nombreIncorrecto);
+		assertTrue ("No ha cambiado el Id usuario correctamente", comment.getIdUsuario().equalsIgnoreCase(nombreCorrecto));
 	}
 
 	@Test
-	public void testAddItem() {
-		/*assertTrue("ERROR: The place is empty but addItem returns false", placeTest.addItem(new MockItem()));
-		assertFalse("ERROR: The place contains an item with the same id but addItem returns true", placeTest.addItem(new MockItem()));
-		assertTrue("ERROR: The place does not contain an item with the same id but addItem returns false", placeTest.addItem(new MockItem(MockItem.WRONG_NAME)));*/
+	public void testGetContenido() 
+	{
+		//Sin fallos
+		comment = new Comentario("pepe", "miau");
+		assertTrue ("contenido correcto",comment.getContenido().equalsIgnoreCase(contenido1));
+
+		//Fallo en contenido
+		comment = new Comentario("oscar", "hola");
+		assertTrue("Fallo en contenido",comment.getContenido().equalsIgnoreCase(contenido2));
+
+		//Sin fallos
+		comment = new Comentario("Ane", "rolf");
+		assertFalse("Contenido Correcto", comment.getContenido().equalsIgnoreCase(contenido3));
 	}
 
 	@Test
-	public void testPickItem() {
+	public void testSetContenido() {
 		/*assertNull("ERROR: The place is empty but pickItem returns an object", placeTest.pickItem(MockItem.DEF_NAME));
 		Item testItem = new MockItem();
 		if (placeTest.addItem(testItem)) {
@@ -81,10 +103,11 @@ public class ComentarioTest {
 		else {
 			fail("ERROR: addItem is not working properly. Try first addItem tests");
 		}*/
+		
 	}
 	
 	@Test
-	public void testExistItem() {
+	public void testGetPuntuacion() {
 		/*assertFalse("ERROR: The place is empty but existItem returns true", placeTest.existItem(MockItem.DEF_NAME));
 		Item testItem = new MockItem();
 		if (placeTest.addItem(testItem)) {
