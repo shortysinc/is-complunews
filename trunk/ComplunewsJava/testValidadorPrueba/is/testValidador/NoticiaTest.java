@@ -2,18 +2,30 @@ package is.testValidador;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.Before;
 import org.junit.Test;
 import is.*;
 
 public class NoticiaTest {
 
+	private ArrayList<Comentario> comentarios;
+	private String titulo;
+	private String contenido;
+	private int valoracion;
+	private ArrayList<Etiquetas> etiquetas;
+	private Categorias categorias;
+	private Noticia noticiaTest;
 
 	@Before
 	public void setUp() throws Exception {
 		/*placeName = "place name";
 		placeDescription = "place description";
 		placeTest = new Place(placeName, false, placeDescription);   */
+		noticiaTest = new Noticia(titulo, contenido, categorias);
+		
+		
 	}
 
 	@Test
