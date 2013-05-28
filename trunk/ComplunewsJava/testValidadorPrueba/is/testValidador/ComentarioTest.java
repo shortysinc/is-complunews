@@ -95,21 +95,43 @@ public class ComentarioTest
 		String contenidoIncorrecto = "Buenos dias";
 		comment = new Comentario("","");
 		comment.setContenido(contenidoCorrecto);
-		assertTrue("El contenido ha cambiado correctamente", comment.getContenido().equalsIgnoreCase(contenidoCorrecto));
+		//assertTrue("El contenido ha cambiado correctamente", comment.getContenido().equalsIgnoreCase(contenidoCorrecto));
 		comment.setContenido(contenidoIncorrecto);
-		assertFalse("El contenido no ha cambiado", comment.getContenido().equalsIgnoreCase(contenidoCorrecto));
+		//assertFalse("El contenido no ha cambiado", comment.getContenido().equalsIgnoreCase(contenidoCorrecto));
+		//prueba
+		if (comment.getContenido().equalsIgnoreCase(contenidoIncorrecto))
+			assertTrue("El contenido ha cambiado correctamente", !comment.getContenido().equalsIgnoreCase(contenidoCorrecto));
+		else
+			assertFalse("El contenido no ha cambiado", comment.getContenido().equalsIgnoreCase(contenidoCorrecto));
 		
 	}
 	
 	@Test
-	public void testGetPuntuacion() 
+	public void testSetGetPuntuacion() 
 	{
-
+		int puntuacionCorrecta=4;
+		int puntuacionIncorrecta=3;
+		comment = new Comentario();
+		comment.setPuntuacion(puntuacionCorrecta);
+		assertTrue("La puntuacion ha cambiado correctamente",comment.getPuntuacion()==puntuacionCorrecta);
+		assertTrue("La puntuacion No ha cambiado correctamente",comment.getPuntuacion()==puntuacionIncorrecta);
+		comment.setPuntuacion(puntuacionIncorrecta);
+		assertTrue("La puntuacion ha cambiado correctamente",comment.getPuntuacion()==puntuacionIncorrecta);
 	}
 	
 	@Test
-	public void testDropItem() 
+	public void testPuntuarComentario() 
 	{
-
+		int aumentaPuntuacion=4;
+		int puntuacionIncorrecta=5;
+		comment= new Comentario();
+		assertTrue("Puntuacion inicial correcta",comment.getPuntuacion()==0);
+		comment.puntuarComentario(aumentaPuntuacion);
+		assertTrue("La puntuacion ha aumentado corectamente", comment.getPuntuacion()!=0);
+		comment.puntuarComentario(aumentaPuntuacion);
+		assertTrue("La puntuacion ha excedido el maximo permitido", comment.getPuntuacion()>5);
+		comment.setPuntuacion(5);
+		assertTrue("La puntuacion es correcta (esta dentro de los limites", comment.getPuntuacion()==5);
+		
 	}
 }
