@@ -19,22 +19,36 @@ public class Noticia {
 		this.valoracion=0;
 	}
 	
+	//done
 	public void anadirComentario(Comentario comentario){
 		this.comentarios.add(comentario);
 	}
+
+	//done
 	public void eliminarComentario(Comentario comentario){
 		this.comentarios.remove(comentario);
 	}
+	
+	//done
 	public void valorarNoticia(int puntuacion){
 		this.valoracion+=puntuacion;
 	}
 	
+	//done
+	public void setValoracion(int valoracion) {
+		this.valoracion = valoracion;
+	}
+
 	public String getTitulo(){
 		return this.titulo;
 	}
+	
+	//done
 	public String getContenido(){
 		return this.contenido;
 	}
+	
+	//done
 	public int getValoracion(){
 		return this.valoracion;
 	}
@@ -44,8 +58,10 @@ public class Noticia {
 	}
 	
 	public boolean anadirEtiqueta(String nombreEtiqueta){
-		if(this.etiquetas.contains(nombreEtiqueta) ) return false;
-		else{
+		if(this.etiquetas.contains(nombreEtiqueta)) 
+			return false;
+		else
+		{
 			this.etiquetas.add(new Etiquetas(nombreEtiqueta));
 			return true;
 		}
@@ -75,6 +91,18 @@ public class Noticia {
 			
 		}
 		return retorno;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public void setContenido(String contenido) {
+		this.contenido = contenido;
+	}
+
+	public void setEtiquetas(ArrayList<Etiquetas> etiquetas) {
+		this.etiquetas = etiquetas;
 	}
 
 	public ArrayList<Comentario> getComentarios() {
