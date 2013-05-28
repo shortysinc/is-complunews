@@ -11,18 +11,19 @@ public class Datos {
 	private String sexo;
 	
 
-	public Datos(int edad, String nombre, String apellidos, String fechaNac, String descripcion, String sexo){
+	public Datos(int edad, String nombre, String apellidos, String fechaNac, String descripcion, String sexo)
+	{
 		this.edad=edad;
 		this.nombre=nombre;
 		this.apellidos=apellidos;
 		this.fechaNac=fechaNac;
 		this.descripcion=descripcion;
 		this.sexo=sexo;
-		
 	}
 
 
-	public int getEdad() {
+	public int getEdad() 
+	{
 		return edad;
 	}
 
