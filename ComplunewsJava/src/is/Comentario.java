@@ -41,6 +41,17 @@ public class Comentario {
 		this.puntuacion += puntuacion;	
 	}
 	
+	public static void main(String [ ] args)
+	{
+		Comentario persona = new Comentario("Jorge", "tu puta madre");
+		persona.setPuntuacion(20);
+		System.out.println(persona.getIdUsuario().toString());
+		System.out.println(persona.getContenido());
+		System.out.println(persona.getPuntuacion());
+		
+		
+	}
+	
 	
 	
 
