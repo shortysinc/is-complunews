@@ -11,6 +11,11 @@ public class Comentario {
 		this.contenido=contenido;
 		this.puntuacion=0;
 	}
+	
+	public Comentario()
+	{
+		this.puntuacion=0;
+	}
 
 	public String getIdUsuario() {
 		return idUsuario;
