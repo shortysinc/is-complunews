@@ -6,6 +6,11 @@ import org.junit.Before;
 import org.junit.Test;
 import is.*;
 
+/**
+ * @version 1.0
+ * @author  JR
+ *
+ */
 public class DatosTest {
 	
 	private int edad;

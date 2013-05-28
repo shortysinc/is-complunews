@@ -1,6 +1,7 @@
 package is;
 
-public class Etiquetas {
+public class Etiquetas 
+{
 	private String nombreEtiqueta;
 	
 	public Etiquetas(String nombreEtiqueta){
