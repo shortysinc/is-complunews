@@ -91,7 +91,13 @@ public class ComentarioTest
 	@Test
 	public void testSetContenido() 
 	{
-		
+		String contenidoCorrecto = "Buenas tardes";
+		String contenidoIncorrecto = "Buenos dias";
+		comment = new Comentario("","");
+		comment.setContenido(contenidoCorrecto);
+		assertTrue("El contenido ha cambiado correctamente", comment.getContenido().equalsIgnoreCase(contenidoCorrecto));
+		comment.setContenido(contenidoIncorrecto);
+		assertFalse("El contenido no ha cambiado", comment.getContenido().equalsIgnoreCase(contenidoCorrecto));
 		
 	}
 	
