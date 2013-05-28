@@ -8,7 +8,6 @@ import org.junit.runners.Suite;
 
 @Suite.SuiteClasses( { 
 						AdministradorTest.class,
-						CategoriasTest.class,
 						ComentarioTest.class,
 						DatosTest.class,
 						EtiquetasTest.class,
