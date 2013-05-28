@@ -2,7 +2,6 @@ package is;
 
 import java.util.ArrayList;
 
-import Connection.ConnectionDaoSingleton;
 import FactoryDao.UsuarioDao;
 
 /*
@@ -24,37 +23,37 @@ public class Usuario implements UsuarioDao
 	
 	@Override
 	public ArrayList<Noticia> buscarNoticiaPorTitulo(String titulo) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return null;
 	}
 
 	@Override
 	public ArrayList<Noticia> buscarNoticiaPorEtiqueta(String titulo) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return null;
 	}
 
 	@Override
 	public ArrayList<Noticia> buscarNoticiaPorCategoria(String titulo) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return null;
 	}
 
 	@Override
 	public void enlazarNoticias() {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		
 	}
 
 	@Override
 	public void verPuntuacionComentario(Noticia noticia) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		
 	}
 
 	@Override
 	public void verComentarios(Noticia noticia) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		
 	}
 
