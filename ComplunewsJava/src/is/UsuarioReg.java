@@ -19,27 +19,27 @@ public class UsuarioReg extends Usuario implements UsuarioRegDao
 		return super.getIdUsuario();
 	}
 	public boolean puntuarComentario(int puntuacion) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		return false;
 	}
 	@Override
-	public boolean cambiarContraseña(String newPass) {
-		// TODO Apéndice de método generado automáticamente
+	public boolean cambiarContrasena(String newPass) {
+		// TODO Apnndice de mntodo generado automnticamente
 		return false;
 	}
 	@Override
-	public boolean añadirComentario(String newComentario) {
-		// TODO Apéndice de método generado automáticamente
+	public boolean anadirComentario(String newComentario) {
+		// TODO Apnndice de mntodo generado automnticamente
 		return false;
 	}
 	@Override
 	public boolean valorarNoticia(int puntuacion) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		return false;
 	}
 	@Override
-	public boolean añadirNoticiaAFavoritos(Noticia noticia) {
-		// TODO Apéndice de método generado automáticamente
+	public boolean anadirNoticiaAFavoritos(Noticia noticia) {
+		// TODO Apnndice de mntodo generado automnticamente
 		if(this.favoritos.contains(noticia)){
 		this.favoritos.add(noticia);
 		return true;
@@ -49,7 +49,7 @@ public class UsuarioReg extends Usuario implements UsuarioRegDao
 	}
 	@Override
 	public boolean cambiarDatos(Datos newDatos) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		return false;
 	}
 	public ArrayList<Noticia> getFavoritos() {

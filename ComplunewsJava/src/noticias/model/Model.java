@@ -63,7 +63,7 @@ public class Model implements IObservable{
 	try {
 		this.conexion.query(info);
 	} catch (SQLException e) {
-		// TODO Bloque catch generado automáticamente
+		// TODO Bloque catch generado automnticamente
 		e.printStackTrace();
 		notifyObserver(UpdateInfo.LogInFail);
 	}
@@ -85,7 +85,7 @@ public class Model implements IObservable{
 		try {
 			ResultSet a = this.conexion.query("Delete * from TablaUsuario where IdUsuario=id;");
 		} catch (SQLException e) {
-			// TODO Bloque catch generado automáticamente
+			// TODO Bloque catch generado automnticamente
 			e.printStackTrace();
 		}
 		
@@ -97,12 +97,12 @@ public class Model implements IObservable{
 			this.notifyObserver(UpdateInfo.DeleteUserFail);*/
 		
 	}
-	public void añadirNoticia(Noticia newNoticia) 
+	public void anadirNoticia(Noticia newNoticia) 
 	{
 		Administrador admin = (Administrador)this.currentUser;
-		if(admin.añadirNoticia(newNoticia))
+		if(admin.anadirNoticia(newNoticia))
 		this.notifyObserver(UpdateInfo.NewsAdded);
-		else System.err.println("Error al añadir noticia");
+		else System.err.println("Error al anadir noticia");
 		
 	}
 	
@@ -115,13 +115,13 @@ public class Model implements IObservable{
 	}
 	
 	public void gestionarComentarios(Noticia noticia) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		
 		notifyObserver(UpdateInfo.CommentModified);
 	}
 	
 	public void registrarAdministrador(Administrador newAdmin) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 
 
 		notifyObserver(UpdateInfo.RegisterAdmin);
@@ -134,28 +134,28 @@ public class Model implements IObservable{
 	}
 	
 	public void buscarNoticiaPorTitulo(String titulo) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		notifyObserver(UpdateInfo.SearchingNewsTitle);
 	}
 	
 	public void buscarNoticiaPorEtiqueta(String titulo) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		notifyObserver(UpdateInfo.SearchingNewsTag);
 	}
 	
 	public void buscarNoticiaPorCategoria(String titulo) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		notifyObserver(UpdateInfo.SearchingNewsCategory);
 	}
 	
 	public void enlazarNoticias(Noticia noticia) {
 		this.currentNoticia=noticia;
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		notifyObserver(UpdateInfo.LinkNews);
 	}
 	
 	public void verPuntuacionComentario(Comentario comen) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.currentNoticia.verPuntuacionComentario(comen);
 		notifyObserver(UpdateInfo.CommentScore);
 		
@@ -192,17 +192,17 @@ public class Model implements IObservable{
 			
 	}
 	
-	public void cambiarContraseña(String newPass) {
+	public void cambiarContrasena(String newPass) {
 		
 		notifyObserver(UpdateInfo.ChangePassword);
 	}
 	
-	public void añadirComentario(String newComentario) {
+	public void anadirComentario(String newComentario) {
 		if(newComentario==null || newComentario=="") System.err.println("Comentario nulo");
 		else{
 		UsuarioReg user = (UsuarioReg) this.currentUser;
 		Comentario comment=new Comentario(user.getIdUsuario(),newComentario);
-		this.currentNoticia.añadirComentario(comment);
+		this.currentNoticia.anadirComentario(comment);
 		notifyObserver(UpdateInfo.AddComment);
 		}
 	}
@@ -216,13 +216,13 @@ public class Model implements IObservable{
 		else System.err.println("Puntuacion invalida");
 	}
 	
-	public void añadirNoticiaAFavoritos(Noticia noticia) {
+	public void anadirNoticiaAFavoritos(Noticia noticia) {
 		
 		
 		UsuarioReg user = (UsuarioReg) this.currentUser;
-		if(user.añadirNoticiaAFavoritos(noticia))
+		if(user.anadirNoticiaAFavoritos(noticia))
 		notifyObserver(UpdateInfo.AddNewToFavorite);
-		else System.err.println("Fallo al añadir noticia a favoritos");
+		else System.err.println("Fallo al anadir noticia a favoritos");
 	}
 	
 	public void cambiarDatos(Datos newDatos) {
@@ -230,21 +230,21 @@ public class Model implements IObservable{
 	}
 	
 	public void buscarUsuario(String nombre) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		notifyObserver(UpdateInfo.SearchUser);
 	}
 	
 	public void insertarUsuario(Usuario usuario) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		notifyObserver(UpdateInfo.InsertUser);
 	}
 	
 	public void modificarUsuario(Usuario usuario) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		notifyObserver(UpdateInfo.ModifyUser);
 	}
 	public void borrarNoticia(Noticia noticia) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		notifyObserver(UpdateInfo.BorrarNoticia);
 	}
 	

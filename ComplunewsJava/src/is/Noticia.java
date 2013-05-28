@@ -19,7 +19,7 @@ public class Noticia {
 		this.valoracion=0;
 	}
 	
-	public void añadirComentario(Comentario comentario){
+	public void anadirComentario(Comentario comentario){
 		this.comentarios.add(comentario);
 	}
 	public void eliminarComentario(Comentario comentario){
@@ -43,7 +43,7 @@ public class Noticia {
 		return etiquetas;
 	}
 	
-	public boolean añadirEtiqueta(String nombreEtiqueta){
+	public boolean anadirEtiqueta(String nombreEtiqueta){
 		if(this.etiquetas.contains(nombreEtiqueta) ) return false;
 		else{
 			this.etiquetas.add(new Etiquetas(nombreEtiqueta));
