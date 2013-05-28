@@ -24,8 +24,8 @@ public class Vista {
 
 	public void addComment() {
 		String nuevoComentario="";
-		// TODO Apéndice de método generado automáticamente
-		this.controller.añadirComentario(nuevoComentario);
+		// TODO Apnndice de mntodo generado automnticamente
+		this.controller.anadirComentario(nuevoComentario);
 	}
 
 	public void linkNews() {
@@ -35,26 +35,26 @@ public class Vista {
 	}
 
 	public void addNewToFavorite() {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		Noticia noticia=null;
-		this.controller.añadirNoticiaAFavoritos(noticia);
+		this.controller.anadirNoticiaAFavoritos(noticia);
 	}
 
 	public void changeData() {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		Datos newDatos=null;
 		this.controller.cambiarDatos(newDatos);
 	}
 
 	public void changePassword() {
 		String newPass=null;
-		// TODO Apéndice de método generado automáticamente
-		this.controller.cambiarContraseña(newPass);
+		// TODO Apnndice de mntodo generado automnticamente
+		this.controller.cambiarContrasena(newPass);
 	}
 
 	public void commentModified() {
 		Noticia noticia=null;
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.controller.gestionarComentarios(noticia);
 	}
 
@@ -62,31 +62,31 @@ public class Vista {
 
 	public void deleteUser() {
 		Usuario usuario=null;
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.controller.eliminarUsuario(usuario);
 	}
 
 	public void insertUser() {
 		Usuario usuario=null;
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.controller.insertarUsuario(usuario);
 	}
 
 	public void logIn() {
 		String idUsuario="Pepito";
 		String pass="teresuki7";
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.controller.iniciarSesion(idUsuario, pass);
 	}
 
 	public void logOut() {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.controller.cerrarSesion();
 	}
 
 	public void modifiedUser() {
 		Usuario usuario=null;
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.controller.modificarUsuario(usuario);
 	}
 
@@ -94,19 +94,19 @@ public class Vista {
 
 	public void newsAdded() {
 		Noticia newNoticia=null;
-		// TODO Apéndice de método generado automáticamente
-		this.controller.añadirNoticia(newNoticia);
+		// TODO Apnndice de mntodo generado automnticamente
+		this.controller.anadirNoticia(newNoticia);
 	}
 
 	public void newsDelete() {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		Noticia noticia=null;
 		this.controller.borrarNoticia(noticia);
 	}
 
 	public void newsModified() {
 		Noticia noticiaAEditar=null;
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.controller.editarNoticia(noticiaAEditar);
 	}
 
@@ -140,26 +140,26 @@ public class Vista {
 
 	public void searchingNewsCategory() {
 		String titulo=null;
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.controller.buscarNoticiaPorCategoria(titulo);
 	}
 
 	public void searchingNewsTag() {
 		String titulo=null;
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.controller.buscarNoticiaPorEtiqueta(titulo);
 	}
 
 	public void searchingNewsTitle() {
 		String titulo=null;
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.controller.buscarNoticiaPorTitulo(titulo);
 		
 	}
 
 	public void showComments() {
 		Noticia noticia=null;
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.controller.verComentarios(noticia);
 	}
 

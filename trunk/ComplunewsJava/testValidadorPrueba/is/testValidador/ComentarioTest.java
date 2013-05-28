@@ -6,10 +6,13 @@ import org.junit.Before;
 import org.junit.Test;
 import is.*;
 
-public class ComentarioTest {
-
+public class ComentarioTest 
+{
 
 	
+	/**
+	 * Variables que usaremos para probar los test 
+	 */
 	private String usuario1;
 	private String usuario2;
 	private String usuario3;
@@ -17,11 +20,6 @@ public class ComentarioTest {
 	private String contenido2;
 	private String contenido3;
 	private Comentario comment;
-	
-	
-	
-	
-	
 	
 	
 	@Before

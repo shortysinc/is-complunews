@@ -103,8 +103,8 @@ public class Controller implements IObserver {
 		this.model.cerrarSesion();
 	}
 
-	public void añadirNoticia(Noticia newNoticia) {
-		this.model.añadirNoticia(newNoticia);
+	public void anadirNoticia(Noticia newNoticia) {
+		this.model.anadirNoticia(newNoticia);
 		
 		
 	}
@@ -133,86 +133,86 @@ public class Controller implements IObserver {
 	}
 	
 	public void registrarse(String idUsuario, String pass, Datos nuevosDatos) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.registrarse(idUsuario, pass, nuevosDatos);
 	}
 	
 	public void buscarNoticiaPorTitulo(String titulo) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.buscarNoticiaPorTitulo(titulo);
 	}
 	
 	public void buscarNoticiaPorEtiqueta(String titulo) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.buscarNoticiaPorEtiqueta(titulo);
 	}
 	
 	public void buscarNoticiaPorCategoria(String titulo) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.buscarNoticiaPorCategoria(titulo);
 	}
 	
 	public void enlazarNoticias(Noticia noticia) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.enlazarNoticias(noticia);
 	}
 	
 	public void verPuntuacionComentario(Comentario comen) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.verPuntuacionComentario(comen);
 	}
 	
 	public void verComentarios(Noticia noticia) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.verComentarios();
 	}
 	
 	public void puntuarComentario(Comentario comentario, int puntuacion) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.puntuarComentario(comentario, puntuacion);
 	}
 	
-	public void cambiarContraseña(String newPass) {
-		// TODO Apéndice de método generado automáticamente
-		this.model.cambiarContraseña(newPass);
+	public void cambiarContrasena(String newPass) {
+		// TODO Apnndice de mntodo generado automnticamente
+		this.model.cambiarContrasena(newPass);
 	}
 	
-	public void añadirComentario(String newComentario) {
-		// TODO Apéndice de método generado automáticamente
-		this.model.añadirComentario(newComentario);
+	public void anadirComentario(String newComentario) {
+		// TODO Apnndice de mntodo generado automnticamente
+		this.model.anadirComentario(newComentario);
 	}
 	
 	public void valorarNoticia(int puntuacion) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.valorarNoticia(puntuacion);
 	}
 	
-	public void añadirNoticiaAFavoritos(Noticia noticia) {
-		// TODO Apéndice de método generado automáticamente
-		this.model.añadirNoticiaAFavoritos(noticia);
+	public void anadirNoticiaAFavoritos(Noticia noticia) {
+		// TODO Apnndice de mntodo generado automnticamente
+		this.model.anadirNoticiaAFavoritos(noticia);
 	}
 	
 	public void cambiarDatos(Datos newDatos) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.cambiarDatos(newDatos);
 	}
 	
 	public void buscarUsuario(String nombre) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.buscarUsuario(nombre);
 	}
 	
 	public void insertarUsuario(Usuario usuario) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.insertarUsuario(usuario);
 	}
 	
 	public void modificarUsuario(Usuario usuario) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.modificarUsuario(usuario);
 	}
 	public void borrarNoticia(Noticia noticia) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apnndice de mntodo generado automnticamente
 		this.model.borrarNoticia(noticia);
 	}
 	
