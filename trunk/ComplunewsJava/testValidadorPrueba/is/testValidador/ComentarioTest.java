@@ -9,19 +9,50 @@ import is.*;
 public class ComentarioTest {
 
 
+	
+	private String usuario1;
+	private String usuario2;
+	private String usuario3;
+	private String contenido1;
+	private String contenido2;
+	private String contenido3;
+	private Comentario comment;
+	
+	
+	
+	
+	
+	
+	
 	@Before
 	public void setUp() throws Exception {
 		/*placeName = "place name";
 		placeDescription = "place description";
 		placeTest = new Place(placeName, false, placeDescription);   */
+		usuario1 = "pepe";
+		usuario2 = "oscar";
+		usuario3 = "ana";
+		contenido1 = "miau";
+		contenido2= "guau";
+		contenido3= "rolf";
 	}
 
 	@Test
-	public void testIsSpaceship() {
-		/*assertFalse("ERROR: We have created a place that does not represent a spaceship but isSpaceship returns true",placeTest.isSpaceship());
-		// Change the place
-		placeTest = new Place("", true, "");
-		assertTrue("ERROR: We have created a place that represents a spaceship but isSpaceship returns false",placeTest.isSpaceship());*/
+	public void testGetIdUsuario() 
+	{
+		//Usuario 1
+		comment = new Comentario("pepe", "miau");
+		assertTrue ("usuario y contenido correcto", comment.getIdUsuario()==usuario1 && comment.getContenido()==contenido1);
+		
+		//Usuario 2 con fallo en contenido
+		comment = new Comentario("oscar", "hola");
+		assertTrue("Usuario con fallo en contenido", comment.getIdUsuario()==usuario2 && comment.getContenido()==contenido2);
+		
+		//Usuario 3 con fallo en usuario
+		comment = new Comentario("Ane", "rolf");
+		assertFalse("Usuario con fallo en usuario", comment.getIdUsuario()==usuario3 && comment.getContenido()==contenido3);
+		
+		
 	}
 
 	@Test
