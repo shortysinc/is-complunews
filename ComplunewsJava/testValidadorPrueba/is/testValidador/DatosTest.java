@@ -7,38 +7,57 @@ import org.junit.Test;
 import is.*;
 
 public class DatosTest {
-
-
+	
+	private int edad;
+	private String nombre;
+	private String apellidos;
+	private String fechaNac;
+	private String descripcion;
+	private String sexo;
+	private Datos datosTest;
 	@Before
-	public void setUp() throws Exception {
-		/*placeName = "place name";
-		placeDescription = "place description";
-		placeTest = new Place(placeName, false, placeDescription);   */
+	public void setUp() throws Exception 
+	{
+		edad=18;
+		nombre="James";
+		apellidos="Hetfield";
+		fechaNac="03/05/1990";
+		descripcion="Soy yo";
+		sexo="Hombre";
+		datosTest= new Datos(edad, nombre, apellidos, fechaNac, descripcion, sexo);
 	}
 
 	@Test
-	public void testGetSetEdad() {
-		/*assertFalse("ERROR: We have created a place that does not represent a spaceship but isSpaceship returns true",placeTest.isSpaceship());
-		// Change the place
-		placeTest = new Place("", true, "");
-		assertTrue("ERROR: We have created a place that represents a spaceship but isSpaceship returns false",placeTest.isSpaceship());*/
+	public void testGetSetEdad() 
+	{
+		int age = datosTest.getEdad();
+		assertNotNull("La edad ha sido creada correctamente", age);
+		datosTest.setEdad(0);
+		assertFalse("La edad no puede ser menor o igual a cero", datosTest.getEdad()<=0 && datosTest.getEdad()>100);
+		datosTest.setEdad(200);
+		assertFalse("La edad no puede ser menor o igual a cero", (datosTest.getEdad()<=0 && datosTest.getEdad()>100));
+		datosTest.setEdad(18);
+		boolean aux = (datosTest.getEdad()<=0 && datosTest.getEdad()>100);
+		assertTrue("La edad es correcta", !aux);
 	}
 
 	@Test
-	public void testToString() {
+	public void testGetSetNombre() 
+	{
 		/*assertTrue("ERROR: the place name does not appear in the string", placeTest.toString().contains(placeName));
 		assertTrue("ERROR: the place description does not appear in the string", placeTest.toString().contains(placeDescription));*/
 	}
 
 	@Test
-	public void testAddItem() {
+	public void testGetSetApellidos() 
+	{
 		/*assertTrue("ERROR: The place is empty but addItem returns false", placeTest.addItem(new MockItem()));
 		assertFalse("ERROR: The place contains an item with the same id but addItem returns true", placeTest.addItem(new MockItem()));
 		assertTrue("ERROR: The place does not contain an item with the same id but addItem returns false", placeTest.addItem(new MockItem(MockItem.WRONG_NAME)));*/
 	}
 
 	@Test
-	public void testPickItem() {
+	public void testGetSetFechaNac() {
 		/*assertNull("ERROR: The place is empty but pickItem returns an object", placeTest.pickItem(MockItem.DEF_NAME));
 		Item testItem = new MockItem();
 		if (placeTest.addItem(testItem)) {
@@ -53,7 +72,7 @@ public class DatosTest {
 	}
 	
 	@Test
-	public void testExistItem() {
+	public void testGetSetDescripcion() {
 		/*assertFalse("ERROR: The place is empty but existItem returns true", placeTest.existItem(MockItem.DEF_NAME));
 		Item testItem = new MockItem();
 		if (placeTest.addItem(testItem)) {
@@ -66,7 +85,7 @@ public class DatosTest {
 	}
 	
 	@Test
-	public void testDropItem() {
+	public void testGetSetSexo() {
 		/*assertTrue("ERROR: The place is empty but dropItem returns false", placeTest.dropItem(new MockItem()));
 		assertFalse("ERROR: The place contains an item with the same id but dropItem returns true", placeTest.dropItem(new MockItem()));
 		assertTrue("ERROR: The place does not contain an item with the same id but dropItem returns false", placeTest.dropItem(new MockItem(MockItem.WRONG_NAME)));*/
