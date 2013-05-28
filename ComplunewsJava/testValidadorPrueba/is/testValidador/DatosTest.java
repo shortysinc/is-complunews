@@ -15,7 +15,7 @@ public class DatosTest {
 	private String descripcion;
 	private String sexo;
 	private Datos datosTest;
-	private String name; 
+	private String name,lastName; 
 	@Before
 	public void setUp() throws Exception 
 	{
@@ -47,10 +47,14 @@ public class DatosTest {
 	{
 		String aux= name= datosTest.getNombre();
 		assertNotNull("Se ha creado correctamente el id de usuario"+ name, name);
+		
 		datosTest.setNombre(null);
 		name=datosTest.getNombre();
 		assertNull("Se ha creado un nombre con null", name);
-		//Por el contrario si no fuese null, habria un error
+		/*
+		 * Por el contrario si no fuese null, habria un error
+		 * podemos ponerlo para probar que falla el test	
+		 */
 		//assertNotNull("Se ha creado un nombre con null", name);
 		datosTest.setNombre("Lars");
 		name=datosTest.getNombre();
@@ -61,6 +65,16 @@ public class DatosTest {
 	@Test
 	public void testGetSetApellidos() 
 	{
+		String aux=lastName= datosTest.getApellidos();
+		assertNotNull("El apellido se ha creado correctamente", lastName);
+		
+		datosTest.setApellidos(null);
+		lastName=datosTest.getApellidos();
+		assertNull("Se ha creado un objeto null", lastName);
+		
+		datosTest.setApellidos("Ulrich");
+		lastName= datosTest.getApellidos();
+		assertFalse("El apellido ha cambiado correctamente", lastName.equalsIgnoreCase(aux));
 		
 	}
 
