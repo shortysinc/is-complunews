@@ -1,10 +1,10 @@
 package is.testValidador;
 
 import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
 import is.*;
+
 
 public class ComentarioTest 
 {
@@ -24,9 +24,6 @@ public class ComentarioTest
 	
 	@Before
 	public void setUp() throws Exception {
-		/*placeName = "place name";
-		placeDescription = "place description";
-		placeTest = new Place(placeName, false, placeDescription);   */
 		usuario1 = "pepe";
 		usuario2 = "oscar";
 		usuario3 = "ana";
@@ -56,13 +53,6 @@ public class ComentarioTest
 	@Test
 	public void testSetIdUsuario() 
 	{
-		/*assertTrue("ERROR: the place name does not appear in the string", placeTest.toString().contains(placeName));
-		assertTrue("ERROR: the place description does not appear in the string", placeTest.toString().contains(placeDescription));*/
-		/*
-		 Card card = new Card();  
-        card.setNativeWord("test");  
-        assertTrue(card.getNativeWord() == "test");
-		 */
 		String nombreCorrecto = "Andres";
 		String nombreIncorrecto = "Javi";
 		comment = new Comentario("","");
@@ -95,10 +85,8 @@ public class ComentarioTest
 		String contenidoIncorrecto = "Buenos dias";
 		comment = new Comentario("","");
 		comment.setContenido(contenidoCorrecto);
-		//assertTrue("El contenido ha cambiado correctamente", comment.getContenido().equalsIgnoreCase(contenidoCorrecto));
 		comment.setContenido(contenidoIncorrecto);
-		//assertFalse("El contenido no ha cambiado", comment.getContenido().equalsIgnoreCase(contenidoCorrecto));
-		//prueba
+		
 		if (comment.getContenido().equalsIgnoreCase(contenidoIncorrecto))
 			assertTrue("El contenido ha cambiado correctamente", !comment.getContenido().equalsIgnoreCase(contenidoCorrecto));
 		else
@@ -113,9 +101,12 @@ public class ComentarioTest
 		int puntuacionIncorrecta=3;
 		comment = new Comentario();
 		comment.setPuntuacion(puntuacionCorrecta);
+		
 		assertTrue("La puntuacion ha cambiado correctamente",comment.getPuntuacion()==puntuacionCorrecta);
 		assertTrue("La puntuacion No ha cambiado correctamente",comment.getPuntuacion()==puntuacionIncorrecta);
+		
 		comment.setPuntuacion(puntuacionIncorrecta);
+		
 		assertTrue("La puntuacion ha cambiado correctamente",comment.getPuntuacion()==puntuacionIncorrecta);
 	}
 	
@@ -123,15 +114,15 @@ public class ComentarioTest
 	public void testPuntuarComentario() 
 	{
 		int aumentaPuntuacion=4;
-		int puntuacionIncorrecta=5;
+		int puntuacionMaxima=5;
 		comment= new Comentario();
 		assertTrue("Puntuacion inicial correcta",comment.getPuntuacion()==0);
 		comment.puntuarComentario(aumentaPuntuacion);
 		assertTrue("La puntuacion ha aumentado corectamente", comment.getPuntuacion()!=0);
 		comment.puntuarComentario(aumentaPuntuacion);
-		assertTrue("La puntuacion ha excedido el maximo permitido", comment.getPuntuacion()>5);
+		assertTrue("La puntuacion ha excedido el maximo permitido", comment.getPuntuacion()>puntuacionMaxima);
 		comment.setPuntuacion(5);
-		assertTrue("La puntuacion es correcta (esta dentro de los limites", comment.getPuntuacion()==5);
+		assertTrue("La puntuacion es correcta (esta dentro de los limites", comment.getPuntuacion()==puntuacionMaxima);
 		
 	}
 }
