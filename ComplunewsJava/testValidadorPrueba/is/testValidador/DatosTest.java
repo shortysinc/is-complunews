@@ -92,7 +92,7 @@ public class DatosTest {
 		
 		datosTest.setFechaNac(null);
 		birthDate=datosTest.getFechaNac();
-		assertNull("Se ha creado un objeto null", lastName);
+		assertNull("Se ha creado un objeto null", birthDate);
 		
 		datosTest.setFechaNac("23/07/1982");
 		birthDate= datosTest.getFechaNac();
@@ -106,8 +106,8 @@ public class DatosTest {
 		assertNotNull("La descripcion se ha creado correctamente", description);
 		
 		datosTest.setDescripcion(null);
-		birthDate=datosTest.getDescripcion();
-		assertNull("Se ha creado un objeto null", lastName);
+		description=datosTest.getDescripcion();
+		assertNull("Se ha creado un objeto null", description);
 		
 		datosTest.setDescripcion("Hola, buenas tardes");
 		description= datosTest.getDescripcion();
@@ -122,7 +122,7 @@ public class DatosTest {
 		
 		datosTest.setSexo(null);
 		sex=datosTest.getSexo();
-		assertNull("Se ha creado un objeto null", lastName);
+		assertNull("Se ha creado un objeto null", sex);
 		
 		datosTest.setSexo("Mujer");
 		sex= datosTest.getSexo();
