@@ -1,6 +1,7 @@
 package is;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Noticia {
 	private ArrayList<Comentario> comentarios;
@@ -18,7 +19,7 @@ public class Noticia {
 		this.valoracion=0;
 	}
 	
-	public void aniadirComentario(Comentario comentario){
+	public void añadirComentario(Comentario comentario){
 		this.comentarios.add(comentario);
 	}
 	public void eliminarComentario(Comentario comentario){
@@ -42,7 +43,7 @@ public class Noticia {
 		return etiquetas;
 	}
 	
-	public boolean aniadirEtiqueta(String nombreEtiqueta){
+	public boolean añadirEtiqueta(String nombreEtiqueta){
 		if(this.etiquetas.contains(nombreEtiqueta) ) return false;
 		else{
 			this.etiquetas.add(new Etiquetas(nombreEtiqueta));
@@ -59,5 +60,28 @@ public class Noticia {
 
 	public void setCategorias(Categorias categorias) {
 		this.categorias = categorias;
+	}
+
+	public int verPuntuacionComentario(Comentario comen) 
+	{
+		Iterator<Comentario> it = comentarios.iterator();
+		int retorno=-1;
+		while (it.hasNext())
+		{
+			Comentario aux= it.next();
+			if(comen.equals(aux)){
+				retorno= aux.getPuntuacion();
+			}
+			
+		}
+		return retorno;
+	}
+
+	public ArrayList<Comentario> getComentarios() {
+		return comentarios;
+	}
+
+	public void setComentarios(ArrayList<Comentario> comentarios) {
+		this.comentarios = comentarios;
 	}
 }
