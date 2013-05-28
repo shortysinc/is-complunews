@@ -91,38 +91,21 @@ public class ComentarioTest {
 	}
 
 	@Test
-	public void testSetContenido() {
-		/*assertNull("ERROR: The place is empty but pickItem returns an object", placeTest.pickItem(MockItem.DEF_NAME));
-		Item testItem = new MockItem();
-		if (placeTest.addItem(testItem)) {
-			Item actualItem;
-			assertNull("ERROR: The place does not contain an item with this id but pickItem returns an object", placeTest.pickItem(MockItem.WRONG_NAME));
-			assertNotNull("ERROR: The place contains an item with this id but pickItem returns null", actualItem=placeTest.pickItem(MockItem.DEF_NAME));
-			assertEquals("ERROR: The place contains an item with this id but pickItem returns null", testItem, actualItem);			
-		}
-		else {
-			fail("ERROR: addItem is not working properly. Try first addItem tests");
-		}*/
+	public void testSetContenido() 
+	{
+		
 		
 	}
 	
 	@Test
-	public void testGetPuntuacion() {
-		/*assertFalse("ERROR: The place is empty but existItem returns true", placeTest.existItem(MockItem.DEF_NAME));
-		Item testItem = new MockItem();
-		if (placeTest.addItem(testItem)) {
-			assertFalse("ERROR: The place does not contain an item with this id but existItem returns true", placeTest.existItem(MockItem.WRONG_NAME));
-			assertTrue("ERROR: The place contains an item with this id but existItem returns false", placeTest.existItem(MockItem.DEF_NAME));		
-		}
-		else {
-			fail("ERROR: addItem is not working properly. Try first addItem tests");
-		}*/
+	public void testGetPuntuacion() 
+	{
+
 	}
 	
 	@Test
-	public void testDropItem() {
-		/*assertTrue("ERROR: The place is empty but dropItem returns false", placeTest.dropItem(new MockItem()));
-		assertFalse("ERROR: The place contains an item with the same id but dropItem returns true", placeTest.dropItem(new MockItem()));
-		assertTrue("ERROR: The place does not contain an item with the same id but dropItem returns false", placeTest.dropItem(new MockItem(MockItem.WRONG_NAME)));*/
+	public void testDropItem() 
+	{
+
 	}
 }

@@ -5,7 +5,7 @@ import is.Noticia;
 
 public interface AdministradorDao {
 	
-	boolean aniadirNoticia(Noticia newNoticia);
+	boolean añadirNoticia(Noticia newNoticia);
 	boolean editarNoticia(Noticia noticiaAEditar);
 	boolean gestionarComentarios(Noticia noticia);
 	boolean registrarAdministrador(Administrador newAdmin);

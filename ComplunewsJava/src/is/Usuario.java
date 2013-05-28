@@ -2,6 +2,7 @@ package is;
 
 import java.util.ArrayList;
 
+import Connection.ConnectionDaoSingleton;
 import FactoryDao.UsuarioDao;
 
 /*
@@ -9,15 +10,18 @@ import FactoryDao.UsuarioDao;
  * Esta clase solo contendra metodos sobre el usuario.
  */
 public class Usuario implements UsuarioDao
-{
-/*private ConnectionDaoSingleton cn;
+{	
+	private String idUsuario;
+	
 
-    public Usuario() 
+
+    public Usuario(String id) 
     {
-        cn = ConnectionDaoSingleton.getInstance();
+        this.setIdUsuario(id);
         
     }
-*/
+
+	
 	@Override
 	public ArrayList<Noticia> buscarNoticiaPorTitulo(String titulo) {
 		// TODO Apéndice de método generado automáticamente
@@ -52,6 +56,16 @@ public class Usuario implements UsuarioDao
 	public void verComentarios(Noticia noticia) {
 		// TODO Apéndice de método generado automáticamente
 		
+	}
+
+
+	public String getIdUsuario() {
+		return idUsuario;
+	}
+
+
+	public void setIdUsuario(String idUsuario) {
+		this.idUsuario = idUsuario;
 	} 
     
 

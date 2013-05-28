@@ -3,9 +3,11 @@ package noticias.controller;
 import java.util.ArrayList;
 
 import is.Administrador;
+import is.Comentario;
 import is.Datos;
 import is.Noticia;
 import is.Usuario;
+import is.UsuarioReg;
 import noticias.model.Model;
 import noticias.view.Vista;
 
@@ -40,8 +42,7 @@ public class Controller implements IObserver {
 			break;
 		case CommentModified: this.vista.commentModified();
 			break;
-		case CommentScore: this.vista.commentScore();
-			break;
+		
 		case DeleteUser: this.vista.deleteUser();
 			break;
 		case InsertUser:this.vista.insertUser();
@@ -55,7 +56,10 @@ public class Controller implements IObserver {
 		case ModifiedUser:this.vista.modifiedUser();
 			break;
 		
-		
+		case LogInFail: this.vista.error("Fallo de login");
+		break;
+		case DeleteUserFail: this.vista.error("Fallo al eliminar el usuario");
+		break;
 		case NewsAdded:this.vista.newsAdded();
 			break;
 		case NewsDelete: this.vista.newsDelete();
@@ -82,8 +86,6 @@ public class Controller implements IObserver {
 		
 		case ValueComment:this.vista.valueComment();
 			break;
-		default:
-			break;
 		
 		}
 	}
@@ -101,13 +103,13 @@ public class Controller implements IObserver {
 		this.model.cerrarSesion();
 	}
 
-	public void aniadirNoticia(Noticia newNoticia) {
-		this.model.aniadirNoticia(newNoticia);
+	public void añadirNoticia(Noticia newNoticia) {
+		this.model.añadirNoticia(newNoticia);
 		
 		
 	}
 	public void eliminarUsuario(Usuario usuario){
-		this.model.eliminarUsuario(usuario);
+		this.model.eliminarUsuario((UsuarioReg)usuario);
 	}
 	
 	public void editarNoticia(Noticia noticiaAEditar) {
@@ -115,15 +117,15 @@ public class Controller implements IObserver {
 		
 	
 	}
-	
+
 	public void gestionarComentarios(Noticia noticia) {
-		
+	
 		this.model.gestionarComentarios(noticia);
 
 	}
 	
 	public void registrarAdministrador(Administrador newAdmin) {
-		
+	
 
 		this.model.registrarAdministrador(newAdmin);
 
@@ -131,89 +133,88 @@ public class Controller implements IObserver {
 	}
 	
 	public void registrarse(String idUsuario, String pass, Datos nuevosDatos) {
-		
+		// TODO Apéndice de método generado automáticamente
 		this.model.registrarse(idUsuario, pass, nuevosDatos);
 	}
 	
 	public void buscarNoticiaPorTitulo(String titulo) {
-		
+		// TODO Apéndice de método generado automáticamente
 		this.model.buscarNoticiaPorTitulo(titulo);
 	}
 	
 	public void buscarNoticiaPorEtiqueta(String titulo) {
-		
+		// TODO Apéndice de método generado automáticamente
 		this.model.buscarNoticiaPorEtiqueta(titulo);
 	}
 	
 	public void buscarNoticiaPorCategoria(String titulo) {
-		
+		// TODO Apéndice de método generado automáticamente
 		this.model.buscarNoticiaPorCategoria(titulo);
 	}
 	
-	public void enlazarNoticias() {
-		
-		this.model.enlazarNoticias();
+	public void enlazarNoticias(Noticia noticia) {
+		// TODO Apéndice de método generado automáticamente
+		this.model.enlazarNoticias(noticia);
 	}
 	
-	public void verPuntuacionComentario(Noticia noticia) {
-		
-		this.model.verPuntuacionComentario(noticia);
+	public void verPuntuacionComentario(Comentario comen) {
+		// TODO Apéndice de método generado automáticamente
+		this.model.verPuntuacionComentario(comen);
 	}
 	
 	public void verComentarios(Noticia noticia) {
-		
-		this.model.verComentarios(noticia);
+		// TODO Apéndice de método generado automáticamente
+		this.model.verComentarios();
 	}
 	
-	public void puntuarComentario(int puntuacion) {
-		
-		this.model.puntuarComentario(puntuacion);
+	public void puntuarComentario(Comentario comentario, int puntuacion) {
+		// TODO Apéndice de método generado automáticamente
+		this.model.puntuarComentario(comentario, puntuacion);
 	}
 	
-	public void cambiarContrasenia(String newPass) {
-		
-		this.model.cambiarContrasenia(newPass);
+	public void cambiarContraseña(String newPass) {
+		// TODO Apéndice de método generado automáticamente
+		this.model.cambiarContraseña(newPass);
 	}
 	
-	public void aniadirComentario(String newComentario) {
-		
-		this.model.aniadirComentario(newComentario);
+	public void añadirComentario(String newComentario) {
+		// TODO Apéndice de método generado automáticamente
+		this.model.añadirComentario(newComentario);
 	}
 	
 	public void valorarNoticia(int puntuacion) {
-		
+		// TODO Apéndice de método generado automáticamente
 		this.model.valorarNoticia(puntuacion);
 	}
 	
-	public void aniadirNoticiaAFavoritos(Noticia noticia) {
-		
-		this.model.aniadirNoticiaAFavoritos(noticia);
+	public void añadirNoticiaAFavoritos(Noticia noticia) {
+		// TODO Apéndice de método generado automáticamente
+		this.model.añadirNoticiaAFavoritos(noticia);
 	}
 	
 	public void cambiarDatos(Datos newDatos) {
-		
+		// TODO Apéndice de método generado automáticamente
 		this.model.cambiarDatos(newDatos);
 	}
 	
 	public void buscarUsuario(String nombre) {
-		
+		// TODO Apéndice de método generado automáticamente
 		this.model.buscarUsuario(nombre);
 	}
 	
 	public void insertarUsuario(Usuario usuario) {
-		
+		// TODO Apéndice de método generado automáticamente
 		this.model.insertarUsuario(usuario);
 	}
 	
 	public void modificarUsuario(Usuario usuario) {
-		
+		// TODO Apéndice de método generado automáticamente
 		this.model.modificarUsuario(usuario);
 	}
 	public void borrarNoticia(Noticia noticia) {
-		
+		// TODO Apéndice de método generado automáticamente
 		this.model.borrarNoticia(noticia);
 	}
-	
 	
 
 
