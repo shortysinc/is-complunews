@@ -1,5 +1,5 @@
 package is;
-
+//Test Terminado
 import FactoryDao.AdministradorDao;
 
 public class Administrador extends UsuarioReg implements AdministradorDao

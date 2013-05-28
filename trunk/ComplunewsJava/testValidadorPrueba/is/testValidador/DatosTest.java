@@ -17,7 +17,7 @@ public class DatosTest {
 	}
 
 	@Test
-	public void testIsSpaceship() {
+	public void testGetSetEdad() {
 		/*assertFalse("ERROR: We have created a place that does not represent a spaceship but isSpaceship returns true",placeTest.isSpaceship());
 		// Change the place
 		placeTest = new Place("", true, "");
