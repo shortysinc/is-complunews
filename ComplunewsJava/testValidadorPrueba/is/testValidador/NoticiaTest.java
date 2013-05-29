@@ -131,30 +131,20 @@ public class NoticiaTest {
 		}
 		catch(NullPointerException e)
 		{
-			fail ("Null Pointer exception");
+			//continue
 		}
+		String nuevaEtiqueta="calentamiento global";
+		etiq.setNombreEtiqueta(nuevaEtiqueta);
+		assertTrue("La etiqueta cambio correctamente",etiq.getNombreEtiqueta().equalsIgnoreCase(nuevaEtiqueta));
 		
 	}
 		
 	
 	
 	@Test
-	public void testExistItem() {
-		/*assertFalse("ERROR: The place is empty but existItem returns true", placeTest.existItem(MockItem.DEF_NAME));
-		Item testItem = new MockItem();
-		if (placeTest.addItem(testItem)) {
-			assertFalse("ERROR: The place does not contain an item with this id but existItem returns true", placeTest.existItem(MockItem.WRONG_NAME));
-			assertTrue("ERROR: The place contains an item with this id but existItem returns false", placeTest.existItem(MockItem.DEF_NAME));		
-		}
-		else {
-			fail("ERROR: addItem is not working properly. Try first addItem tests");
-		}*/
+	public void testVerPuntuacionComentario() 
+	{
+		// TODO pendiente
 	}
 	
-	@Test
-	public void testDropItem() {
-		/*assertTrue("ERROR: The place is empty but dropItem returns false", placeTest.dropItem(new MockItem()));
-		assertFalse("ERROR: The place contains an item with the same id but dropItem returns true", placeTest.dropItem(new MockItem()));
-		assertTrue("ERROR: The place does not contain an item with the same id but dropItem returns false", placeTest.dropItem(new MockItem(MockItem.WRONG_NAME)));*/
-	}
 }

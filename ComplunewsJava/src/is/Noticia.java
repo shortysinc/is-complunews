@@ -57,6 +57,7 @@ public class Noticia {
 		return etiquetas;
 	}
 	
+	//Done
 	public boolean anadirEtiqueta(String nombreEtiqueta){
 		if(this.etiquetas.contains(nombreEtiqueta)) 
 			return false;
