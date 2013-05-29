@@ -37,6 +37,7 @@ public class NoticiaTest {
 		noticiaTest = new Noticia(titulo, contenido, categorias);
 		
 		
+		
 	}
 
 	@Test
@@ -118,8 +119,24 @@ public class NoticiaTest {
 	@Test
 	public void testAnadirEtiqueta() 
 	{
+		boolean addTag;
+		Etiquetas etiq=new Etiquetas("Calentamiento");
+		try
+		{
+			addTag=noticiaTest.anadirEtiqueta(etiq.getNombreEtiqueta());
+			if(addTag)
+				assertTrue("Se ha añadido correctamente la etiqueta", addTag);
+			else
+				assertFalse("No se ha añadido correctamente la etiqueta", addTag);
+		}
+		catch(NullPointerException e)
+		{
+			fail ("Null Pointer exception");
+		}
 		
 	}
+		
+	
 	
 	@Test
 	public void testExistItem() {
