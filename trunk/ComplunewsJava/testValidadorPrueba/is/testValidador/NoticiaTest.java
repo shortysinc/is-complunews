@@ -144,11 +144,31 @@ public class NoticiaTest {
 	@Test
 	public void testVerPuntuacionComentario() 
 	{
-		//TODO me he quedado aqui
-		/*noticiaTest.setValoracion(4);
-		boolean comentarioCorrecto=(noticiaTest.verPuntuacionComentario(comentario)>0 && noticiaTest.verPuntuacionComentario(comentario)<=5);
-		assertTrue("Muestra correctamente la puntuacion"+comentarioCorrecto, comentarioCorrecto);*/
+		boolean comment;
+		idUsuario= "Paco";
+		contenido="cualquier contenido";
+		comentario= new Comentario(idUsuario, contenido);
+		comentario.setPuntuacion(4);
+		noticiaTest.anadirComentario(comentario);
+		comment = (noticiaTest.verPuntuacionComentario(comentario)>0 && noticiaTest.verPuntuacionComentario(comentario)<=5);
+		assertTrue("Muestra correctamente la puntuacion" , comment);
+		comentario.puntuarComentario(5);
+		noticiaTest.anadirComentario(comentario);
+		comment = (noticiaTest.verPuntuacionComentario(comentario)>0 && noticiaTest.verPuntuacionComentario(comentario)<=5);
+	}
+	
+	@Test
+	public void testSetGetComentario() 
+	{
 		
 	}
+	
+	
+	@Test
+	public void testSetGetEtiquetas() 
+	{
+		
+	}
+	
 	
 }
