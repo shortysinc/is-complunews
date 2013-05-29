@@ -11,7 +11,8 @@ public class Noticia {
 	private ArrayList<Etiquetas> etiquetas;
 	private Categorias categorias;
 	
-	public Noticia(String titulo, String contenido,Categorias categoria){
+	public Noticia(String titulo, String contenido,Categorias categoria)
+	{
 		this.titulo=titulo;
 		this.contenido=contenido;
 		this.comentarios=new ArrayList<Comentario>();
