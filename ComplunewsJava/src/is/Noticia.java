@@ -53,10 +53,8 @@ public class Noticia {
 	public int getValoracion(){
 		return this.valoracion;
 	}
+	
 
-	public ArrayList<Etiquetas> getEtiquetas() {
-		return etiquetas;
-	}
 	
 	//Done
 	public boolean anadirEtiqueta(String nombreEtiqueta){
@@ -103,16 +101,20 @@ public class Noticia {
 	public void setContenido(String contenido) {
 		this.contenido = contenido;
 	}
-
+	//TODO En proceso
 	public void setEtiquetas(ArrayList<Etiquetas> etiquetas) {
 		this.etiquetas = etiquetas;
 	}
-
+	//TODO En proceso
 	public ArrayList<Comentario> getComentarios() {
 		return comentarios;
 	}
-
+	//TODO En proceso
 	public void setComentarios(ArrayList<Comentario> comentarios) {
 		this.comentarios = comentarios;
+	}
+	//TODO En proceso
+	public ArrayList<Etiquetas> getEtiquetas() {
+		return etiquetas;
 	}
 }
