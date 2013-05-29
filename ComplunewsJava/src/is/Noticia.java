@@ -79,7 +79,8 @@ public class Noticia {
 	public void setCategorias(Categorias categorias) {
 		this.categorias = categorias;
 	}
-
+	
+	//Done
 	public int verPuntuacionComentario(Comentario comen) 
 	{
 		Iterator<Comentario> it = comentarios.iterator();
