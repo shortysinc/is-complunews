@@ -144,7 +144,11 @@ public class NoticiaTest {
 	@Test
 	public void testVerPuntuacionComentario() 
 	{
-		// TODO pendiente
+		//TODO me he quedado aqui
+		/*noticiaTest.setValoracion(4);
+		boolean comentarioCorrecto=(noticiaTest.verPuntuacionComentario(comentario)>0 && noticiaTest.verPuntuacionComentario(comentario)<=5);
+		assertTrue("Muestra correctamente la puntuacion"+comentarioCorrecto, comentarioCorrecto);*/
+		
 	}
 	
 }
