@@ -8,9 +8,12 @@ import java.util.Iterator;
 import org.junit.Before;
 import org.junit.Test;
 
-
 import is.*;
 
+/**
+ * @version 1.0
+ * @author  JR
+ */
 public class NoticiaTest {
 
 	private ArrayList<Comentario> comentarios;
