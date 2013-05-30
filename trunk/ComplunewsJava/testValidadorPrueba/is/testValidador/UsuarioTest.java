@@ -9,6 +9,7 @@ import is.*;
 /**
  * @version 1.0
  * @author  Ana
+ * @author  JR
  *
  */
 public class UsuarioTest {
@@ -29,18 +30,23 @@ public class UsuarioTest {
 	public void testGetPass() {
 		usuarioTest.setPass(contrasena);
 		assertTrue("ERROR: La contraseña devuelta no coincide",usuarioTest.getPass().equals(contrasena));
+		String nuevaPass = "nuevacontrasena";
+		usuarioTest.setPass(nuevaPass);
+		assertFalse("La contraseñas no coinciden, por lo tanto ha cambiado bien", usuarioTest.getPass().equals(contrasena));
 	}
 
 	@Test
 	public void testGetIdUsuario() 	{
-		assertTrue("ERROR: El nombre de usuario no coincide", usuarioTest.getIdUsuario().contains(idUsuario));
+		assertTrue("El nombre de usuario coincide con el usuario creado", usuarioTest.getIdUsuario().contains(idUsuario));
 	}
 
 	@Test
 	public void testSetIdUsuario() 	{
 		String nuevaID = "nuevaID";
 		usuarioTest.setIdUsuario(nuevaID);
-		assertTrue("ERROR: La ID recibida no se corresponde con la ID nueva", usuarioTest.getIdUsuario().contains(nuevaID));
+		assertTrue("La ID recibida se corresponde con la ID nueva", usuarioTest.getIdUsuario().contains(nuevaID));
+		usuarioTest.setIdUsuario(idUsuario);
+		assertFalse("La ID recibida no se corresponde con la ID nueva", usuarioTest.getIdUsuario().contains(nuevaID));
 	}
 
 }
