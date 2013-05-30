@@ -3,7 +3,8 @@ package FactoryDao;
 import is.Administrador;
 import is.Noticia;
 
-public interface AdministradorDao {
+public interface AdministradorDao 
+{
 	
 	boolean anadirNoticia(Noticia newNoticia);
 	boolean editarNoticia(Noticia noticiaAEditar);
