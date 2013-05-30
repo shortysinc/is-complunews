@@ -13,6 +13,8 @@ public class Usuario implements UsuarioDao
 {	
 	private String idUsuario;
 	private String contrasena;
+	private Datos datos;
+	private Categorias preferencias;
 
 	//aqui podriamos tener una instacia de la conexion, y desde el modelo llamar a estos metodos. 
 
@@ -80,5 +82,11 @@ public class Usuario implements UsuarioDao
 		this.idUsuario = idUsuario;
 	} 
 
+	public void setDatos(int edad, String nombre, String apellidos, String fechaNac, String descripcion, String sexo) {
 
+	} 
+
+	public void cambiarPreferencias(){
+		
+	}
 }
