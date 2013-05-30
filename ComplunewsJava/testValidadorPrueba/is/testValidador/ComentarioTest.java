@@ -40,15 +40,15 @@ public class ComentarioTest
 	{
 		//Usuario 1 sin fallos
 		comment = new Comentario("pepe", "miau");
-		assertTrue ("usuario y contenido correcto", comment.getIdUsuario().equalsIgnoreCase(usuario1));
+		assertTrue ("usuario correcto", comment.getIdUsuario().equalsIgnoreCase(usuario1));
 		
 		//Usuario 2 con fallo
 		comment = new Comentario("ruben", "hola");
-		assertTrue("Usuario con fallo en contenido", comment.getIdUsuario().equalsIgnoreCase(usuario2));
+		assertFalse("Usuario con fallo en contenido", comment.getIdUsuario().equalsIgnoreCase(usuario2));
 		
 		//Usuario 3 con fallo en usuario
 		comment = new Comentario("ana", "rolf");
-		assertFalse("Usuario con fallo en usuario", comment.getIdUsuario().equalsIgnoreCase(usuario3));
+		assertTrue("Usuario correcto", comment.getIdUsuario().equalsIgnoreCase(usuario3));
 		
 		
 	}
@@ -62,7 +62,7 @@ public class ComentarioTest
 		comment.setIdUsuario(nombreCorrecto);
 		assertTrue("Ha cambiado el Id usuario correctamente", comment.getIdUsuario().equalsIgnoreCase(nombreCorrecto));
 		comment.setIdUsuario(nombreIncorrecto);
-		assertTrue ("No ha cambiado el Id usuario correctamente", comment.getIdUsuario().equalsIgnoreCase(nombreCorrecto));
+		assertFalse ("No ha cambiado el Id usuario correctamente", comment.getIdUsuario().equalsIgnoreCase(nombreCorrecto));
 	}
 
 	@Test
@@ -74,11 +74,11 @@ public class ComentarioTest
 
 		//Fallo en contenido
 		comment = new Comentario("oscar", "hola");
-		assertTrue("Fallo en contenido",comment.getContenido().equalsIgnoreCase(contenido2));
+		assertFalse("Fallo en contenido",comment.getContenido().equalsIgnoreCase(contenido2));
 
 		//Sin fallos
 		comment = new Comentario("Ane", "rolf");
-		assertFalse("Contenido Correcto", comment.getContenido().equalsIgnoreCase(contenido3));
+		assertTrue("Contenido Correcto", comment.getContenido().equalsIgnoreCase(contenido3));
 	}
 
 	@Test
@@ -106,7 +106,7 @@ public class ComentarioTest
 		comment.setPuntuacion(puntuacionCorrecta);
 		
 		assertTrue("La puntuacion ha cambiado correctamente",comment.getPuntuacion()==puntuacionCorrecta);
-		assertTrue("La puntuacion No ha cambiado correctamente",comment.getPuntuacion()==puntuacionIncorrecta);
+		assertFalse("La puntuacion No ha cambiado correctamente",comment.getPuntuacion()==puntuacionIncorrecta);
 		
 		comment.setPuntuacion(puntuacionIncorrecta);
 		
