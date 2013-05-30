@@ -11,41 +11,47 @@ import is.*;
 /**
  * @version 1.0
  * @author  Ana
+ * @author  JR
  *
  */
 public class UsuarioRegTest {
 
-	private UsuarioReg regUser;
+	private UsuarioReg regUserTest;
 	private ArrayList<Noticia> favoritos;
 	private String idUsuario;
 
 	@Before
 	public void setUp() throws Exception {
 		idUsuario = "idUsuario";
-		regUser = new UsuarioReg(idUsuario);
+		regUserTest = new UsuarioReg(idUsuario);
 		
 	}
 
 	@Test
 	public void testGetIdUsuario() 	{
-		assertTrue("ERROR: El nombre de usuario no coincide", regUser.getIdUsuario().contains(idUsuario));
-		regUser.setIdUsuario("otroID");
-		assertFalse("ERROR: El nombre de usuario no coincide", regUser.getIdUsuario().contains(idUsuario));
+		assertNotNull("Usuario Creado correctamente", regUserTest.getIdUsuario());
+		regUserTest.setIdUsuario(null);
+		assertNull("ERROR: Usuario creado con <Null> creado", regUserTest.getIdUsuario());
+		
+		regUserTest.setIdUsuario(idUsuario);
+		assertTrue("El nombre de usuario coincide", regUserTest.getIdUsuario().contains(idUsuario));
+		regUserTest.setIdUsuario("otroID");
+		assertFalse("ERROR: El nombre de usuario no coincide", regUserTest.getIdUsuario().contains(idUsuario));
 	}
 	
 	@Test
 	public void testAnadirNoticiaAFavoritos() {
 		Noticia noticia = new Noticia("titulo", "contenido", Categorias.Moda);
-		assertTrue("ERROR: El array no contiene la noticia pero no se agrega", regUser.anadirNoticiaAFavoritos(noticia));
-		assertFalse("ERROR: El array contiene la noticia y la vuelve a agregar", regUser.anadirNoticiaAFavoritos(noticia));
+		assertTrue("Se agrega la noticia correctamente", regUserTest.anadirNoticiaAFavoritos(noticia));
+		assertFalse("ERROR: No se agrega la noticia, porque ya existe la misma noticia", regUserTest.anadirNoticiaAFavoritos(noticia));
 	
 	}
 
 	@Test
 	public void testGetSetFavoritos() 	{
 		favoritos = new ArrayList<Noticia>();
-		regUser.setFavoritos(favoritos);
-		assertTrue("ERROR: La lista de favoritos no coincide", regUser.getFavoritos().equals(favoritos));
+		regUserTest.setFavoritos(favoritos);
+		assertTrue("ERROR: La lista de favoritos no coincide", regUserTest.getFavoritos().equals(favoritos));
 	}
 	
 }
