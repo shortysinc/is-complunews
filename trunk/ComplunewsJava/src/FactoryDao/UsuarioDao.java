@@ -11,15 +11,15 @@ public interface UsuarioDao
 	/* Usuario buscarUsuario(String nombre);
 	 void insertarUsuario(Usuario usuario);
 	 void modificarUsuario(Usuario usuario);*/
-	 
-	 
-	  ArrayList<Noticia> buscarNoticiaPorTitulo(String titulo);
-	  ArrayList<Noticia> buscarNoticiaPorEtiqueta(String titulo);
-	  ArrayList<Noticia> buscarNoticiaPorCategoria(String titulo);
-	  void enlazarNoticias();
-	  void verPuntuacionComentario(Noticia noticia);
-	  void verComentarios(Noticia noticia);
-	  
-	 
-	  
+
+
+	ArrayList<Noticia> buscarNoticiaPorTitulo(String titulo);
+	ArrayList<Noticia> buscarNoticiaPorEtiqueta(String titulo);
+	ArrayList<Noticia> buscarNoticiaPorCategoria(String titulo);
+	void enlazarNoticias();
+	void verPuntuacionComentario(Noticia noticia);
+	void verComentarios(Noticia noticia);
+
+
+
 }

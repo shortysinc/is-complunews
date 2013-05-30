@@ -16,37 +16,37 @@ public class UsuarioMySqlFactoryDao implements UsuarioDao {
 
 	@Override
 	public ArrayList<Noticia> buscarNoticiaPorTitulo(String titulo) {
-		// TODO Apéndice de método generado automáticamente
+		
 		return null;
 	}
 
 	@Override
 	public ArrayList<Noticia> buscarNoticiaPorEtiqueta(String titulo) {
-		// TODO Apéndice de método generado automáticamente
+		
 		return null;
 	}
 
 	@Override
 	public ArrayList<Noticia> buscarNoticiaPorCategoria(String titulo) {
-		// TODO Apéndice de método generado automáticamente
+		
 		return null;
 	}
 
 	@Override
 	public void enlazarNoticias() {
-		// TODO Apéndice de método generado automáticamente
+		
 		
 	}
 
 	@Override
 	public void verPuntuacionComentario(Noticia noticia) {
-		// TODO Apéndice de método generado automáticamente
+		
 		
 	}
 
 	@Override
 	public void verComentarios(Noticia noticia) {
-		// TODO Apéndice de método generado automáticamente
+		
 		
 	}
 
