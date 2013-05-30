@@ -25,7 +25,6 @@ public class UsuarioTest
 		idUsuario = "id usuario";
 		contrasena = "contrasena";
 		usuarioTest = new Usuario(idUsuario);
-
 	}
 
 	@Test
