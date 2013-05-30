@@ -3,15 +3,15 @@ package is;
 import FactoryDao.UsuarioNoRegDao;
 
 public class UsuarioNoReg  extends Usuario implements UsuarioNoRegDao{
-
+	
 	public UsuarioNoReg(String id) {
 		super(id);
-		// TODO Apéndice de constructor generado automáticamente
+		// TODO Apï¿½ndice de constructor generado automï¿½ticamente
 	}
 
 	@Override
 	public void registrarse(String idUsuario, String pass, Datos nuevosDatos) {
-		
+		super.setPass(pass);
 		
 	}
 
