@@ -11,7 +11,7 @@ import is.*;
 /**
  * @version 1.0
  * @author  Ana
- * @author  JR
+ * @author  Jorge
  *
  */
 public class UsuarioRegTest {
@@ -51,7 +51,7 @@ public class UsuarioRegTest {
 	public void testGetSetFavoritos() 	{
 		favoritos = new ArrayList<Noticia>();
 		regUserTest.setFavoritos(favoritos);
-		assertTrue("ERROR: La lista de favoritos no coincide", regUserTest.getFavoritos().equals(favoritos));
+		assertTrue("La lista de favoritos coincide con la añadida", regUserTest.getFavoritos().equals(favoritos));
 	}
 	
 }

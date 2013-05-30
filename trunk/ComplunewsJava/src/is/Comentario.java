@@ -13,7 +13,7 @@ public class Comentario {
 	}
 
 	public Comentario() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public String getIdUsuario() {

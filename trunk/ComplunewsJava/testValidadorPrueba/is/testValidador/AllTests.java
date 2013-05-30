@@ -3,7 +3,11 @@ package is.testValidador;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
-
+/**
+ * @version 1.0
+ * @author  Jorge
+ *
+ */
 @RunWith(Suite.class) 
 
 @Suite.SuiteClasses( { 
@@ -12,8 +16,8 @@ import org.junit.runners.Suite;
 						DatosTest.class,
 						EtiquetasTest.class,
 						NoticiaTest.class,
-						//UsuarioNoRegTest.class,
-						//UsuarioRegTest.class,
+						UsuarioNoRegTest.class,
+						UsuarioRegTest.class,
 						UsuarioTest.class,
 						
 					} ) 

@@ -8,7 +8,7 @@ import org.junit.Test;
 import is.*;
 /**
  * @version 1.0
- * @author  JR
+ * @author  Jorge
  *
  */
 public class AdministradorTest {

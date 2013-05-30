@@ -39,15 +39,15 @@ public class ComentarioTest
 	public void testGetIdUsuario() 
 	{
 		//Usuario 1 sin fallos
-		comment = new Comentario("pepe", "miau");
+		comment = new Comentario("pepe", "");
 		assertTrue ("usuario correcto", comment.getIdUsuario().equalsIgnoreCase(usuario1));
 		
 		//Usuario 2 con fallo
-		comment = new Comentario("ruben", "hola");
+		comment = new Comentario("ruben", "");
 		assertFalse("Usuario con fallo en contenido", comment.getIdUsuario().equalsIgnoreCase(usuario2));
 		
 		//Usuario 3 con fallo en usuario
-		comment = new Comentario("ana", "rolf");
+		comment = new Comentario("ana", "");
 		assertTrue("Usuario correcto", comment.getIdUsuario().equalsIgnoreCase(usuario3));
 		
 		
@@ -56,45 +56,39 @@ public class ComentarioTest
 	@Test
 	public void testSetIdUsuario() 
 	{
+		comment = new Comentario(null, "");
+		assertNull("Se ha creado un comentario con un usuario <null>", comment.getIdUsuario());
+		
 		String nombreCorrecto = "Andres";
-		String nombreIncorrecto = "Javi";
 		comment = new Comentario("","");
 		comment.setIdUsuario(nombreCorrecto);
 		assertTrue("Ha cambiado el Id usuario correctamente", comment.getIdUsuario().equalsIgnoreCase(nombreCorrecto));
-		comment.setIdUsuario(nombreIncorrecto);
-		assertFalse ("No ha cambiado el Id usuario correctamente", comment.getIdUsuario().equalsIgnoreCase(nombreCorrecto));
 	}
 
 	@Test
 	public void testGetContenido() 
 	{
 		//Sin fallos
-		comment = new Comentario("pepe", "miau");
+		comment = new Comentario();
+		comment.setContenido("miau");
 		assertTrue ("contenido correcto",comment.getContenido().equalsIgnoreCase(contenido1));
 
 		//Fallo en contenido
-		comment = new Comentario("oscar", "hola");
+		comment.setContenido("hola");
 		assertFalse("Fallo en contenido",comment.getContenido().equalsIgnoreCase(contenido2));
 
 		//Sin fallos
-		comment = new Comentario("Ane", "rolf");
+		comment.setContenido("rolf");
 		assertTrue("Contenido Correcto", comment.getContenido().equalsIgnoreCase(contenido3));
 	}
 
 	@Test
 	public void testSetContenido() 
 	{
-		String contenidoCorrecto = "Buenas tardes";
-		String contenidoIncorrecto = "Buenos dias";
-		comment = new Comentario("","");
-		comment.setContenido(contenidoCorrecto);
-		comment.setContenido(contenidoIncorrecto);
-		
-		if (comment.getContenido().equalsIgnoreCase(contenidoIncorrecto))
-			assertTrue("El contenido ha cambiado correctamente", !comment.getContenido().equalsIgnoreCase(contenidoCorrecto));
-		else
-			assertFalse("El contenido no ha cambiado", comment.getContenido().equalsIgnoreCase(contenidoCorrecto));
-		
+		String contenido1 = "Contenido1";
+		comment = new Comentario();
+		comment.setContenido(contenido1);
+		assertTrue("Se ha cambiado el contenido correctamente", comment.getContenido().equalsIgnoreCase(contenido1));
 	}
 	
 	@Test
