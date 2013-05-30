@@ -2,7 +2,8 @@ package is;
 
 import FactoryDao.UsuarioNoRegDao;
 
-public class UsuarioNoReg  extends Usuario implements UsuarioNoRegDao{
+public class UsuarioNoReg  extends Usuario implements UsuarioNoRegDao
+{
 
 	public UsuarioNoReg(String id) 
 	{
