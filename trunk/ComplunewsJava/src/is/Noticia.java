@@ -11,8 +11,7 @@ public class Noticia {
 	private ArrayList<Etiquetas> etiquetas;
 	private Categorias categorias;
 	
-	public Noticia(String titulo, String contenido,Categorias categoria)
-	{
+	public Noticia(String titulo, String contenido, Categorias categoria) {
 		this.titulo=titulo;
 		this.contenido=contenido;
 		this.comentarios=new ArrayList<Comentario>();
@@ -60,8 +59,7 @@ public class Noticia {
 	public boolean anadirEtiqueta(String nombreEtiqueta){
 		if(this.etiquetas.contains(nombreEtiqueta)) 
 			return false;
-		else
-		{
+		else {
 			this.etiquetas.add(new Etiquetas(nombreEtiqueta));
 			return true;
 		}
@@ -79,12 +77,10 @@ public class Noticia {
 	}
 	
 	
-	public int verPuntuacionComentario(Comentario comen) 
-	{
+	public int verPuntuacionComentario(Comentario comen)  {
 		Iterator<Comentario> it = comentarios.iterator();
 		int retorno=-1;
-		while (it.hasNext())
-		{
+		while (it.hasNext()) {
 			Comentario aux= it.next();
 			if(comen.equals(aux)){
 				retorno= aux.getPuntuacion();
