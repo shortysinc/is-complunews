@@ -1,11 +1,16 @@
 package is.testValidador;
-//Ana
+
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 import is.*;
 
+/**
+ * @version 1.0
+ * @author  Ana
+ *
+ */
 public class UsuarioTest {
 
 	Usuario usuarioTest;
