@@ -20,22 +20,22 @@ public class Noticia {
 		this.valoracion=0;
 	}
 	
-	//done
+	
 	public void anadirComentario(Comentario comentario){
 		this.comentarios.add(comentario);
 	}
 
-	//done
+	
 	public void eliminarComentario(Comentario comentario){
 		this.comentarios.remove(comentario);
 	}
 	
-	//done
+	
 	public void valorarNoticia(int puntuacion){
 		this.valoracion+=puntuacion;
 	}
 	
-	//done
+	
 	public void setValoracion(int valoracion) {
 		this.valoracion = valoracion;
 	}
@@ -44,19 +44,19 @@ public class Noticia {
 		return this.titulo;
 	}
 	
-	//done
+	
 	public String getContenido(){
 		return this.contenido;
 	}
 	
-	//done
+	
 	public int getValoracion(){
 		return this.valoracion;
 	}
 	
 
 	
-	//Done
+	
 	public boolean anadirEtiqueta(String nombreEtiqueta){
 		if(this.etiquetas.contains(nombreEtiqueta)) 
 			return false;
@@ -78,7 +78,7 @@ public class Noticia {
 		this.categorias = categorias;
 	}
 	
-	//Done
+	
 	public int verPuntuacionComentario(Comentario comen) 
 	{
 		Iterator<Comentario> it = comentarios.iterator();
@@ -101,19 +101,19 @@ public class Noticia {
 	public void setContenido(String contenido) {
 		this.contenido = contenido;
 	}
-	//TODO En proceso
+	
 	public void setEtiquetas(ArrayList<Etiquetas> etiquetas) {
 		this.etiquetas = etiquetas;
 	}
-	//Done
+	
 	public ArrayList<Comentario> getComentarios() {
 		return comentarios;
 	}
-	//Done
+	
 	public void setComentarios(ArrayList<Comentario> comentarios) {
 		this.comentarios = comentarios;
 	}
-	//TODO En proceso
+	
 	public ArrayList<Etiquetas> getEtiquetas() {
 		return etiquetas;
 	}
