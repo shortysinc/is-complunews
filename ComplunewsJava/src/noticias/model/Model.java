@@ -299,7 +299,13 @@ public class Model implements IObservable
 		notifyObserver(UpdateInfo.BorrarNoticia);
 	}
 
+	public void showComments(){
+		
+	}
 
+	public void cambiarPreferencias(){
+		
+	}
 
 
 
