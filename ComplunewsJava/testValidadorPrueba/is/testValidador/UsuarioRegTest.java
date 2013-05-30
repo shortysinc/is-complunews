@@ -48,4 +48,4 @@ public class UsuarioRegTest {
 		assertTrue("ERROR: La lista de favoritos no coincide", regUser.getFavoritos().equals(favoritos));
 	}
 	
-	}
+}
