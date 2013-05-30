@@ -147,19 +147,36 @@ public class NoticiaTest {
 		boolean comment;
 		idUsuario= "Paco";
 		contenido="cualquier contenido";
+		
 		comentario= new Comentario(idUsuario, contenido);
 		comentario.setPuntuacion(4);
 		noticiaTest.anadirComentario(comentario);
 		comment = (noticiaTest.verPuntuacionComentario(comentario)>0 && noticiaTest.verPuntuacionComentario(comentario)<=5);
 		assertTrue("Muestra correctamente la puntuacion" , comment);
+		
 		comentario.puntuarComentario(5);
 		noticiaTest.anadirComentario(comentario);
 		comment = (noticiaTest.verPuntuacionComentario(comentario)>0 && noticiaTest.verPuntuacionComentario(comentario)<=5);
+		assertFalse("No muestra correctamente la puntuacion" , comment);
 	}
 	
 	@Test
 	public void testSetGetComentario() 
 	{
+		idUsuario= "Paco";
+		contenido="cualquier contenido";
+		comentario= new Comentario(idUsuario, contenido);
+		noticiaTest.anadirComentario(comentario);
+		comentarios.add(comentario);
+		assertTrue("El metodo get Comentarios funciona bien",noticiaTest.getComentarios().equals(comentarios));
+		
+		contenido="cualquier contenido nuevo";
+		idUsuario= "Paco";
+		Comentario comment= new Comentario(idUsuario, contenido);
+		ArrayList<Comentario> auxComentario= new ArrayList<Comentario>();
+		auxComentario.add(comment);
+		noticiaTest.setComentarios(auxComentario);
+		assertFalse("El metodo set Comentarios funciona bien",noticiaTest.getComentarios().equals(comentarios));
 		
 	}
 	
@@ -167,6 +184,29 @@ public class NoticiaTest {
 	@Test
 	public void testSetGetEtiquetas() 
 	{
+		Etiquetas etiq1, etiq2;
+		ArrayList<Etiquetas> auxEtiquetas = new ArrayList<Etiquetas>();
+		
+		etiq1 = new Etiquetas("Calentamiento");
+		etiq2 = new Etiquetas("Altercados");
+
+		etiquetas.add(etiq1);
+		etiquetas.add(etiq2);
+		noticiaTest.setEtiquetas(etiquetas);
+		assertTrue("El metodo Set Etiquetas funciona bien",noticiaTest.getEtiquetas().equals(etiquetas));
+		
+		auxEtiquetas.add(etiq2);
+		etiq1 = new Etiquetas("dinero");
+		auxEtiquetas.add(etiq1);
+		assertFalse("El metodo Set Etiquetas NO funciona bien",noticiaTest.getEtiquetas().equals(auxEtiquetas));
+		
+		noticiaTest.setEtiquetas(auxEtiquetas);
+		assertTrue("El metodo Set Etiquetas funciona bien",noticiaTest.getEtiquetas().equals(auxEtiquetas));
+		
+		
+		
+		
+		
 		
 	}
 	
