@@ -1,5 +1,6 @@
 package noticias.controller;
 
-public interface IObserver {
- void update(UpdateInfo updateType);
+public interface IObserver 
+{
+	void update(UpdateInfo updateType);
 }
