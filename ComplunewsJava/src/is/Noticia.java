@@ -105,11 +105,11 @@ public class Noticia {
 	public void setEtiquetas(ArrayList<Etiquetas> etiquetas) {
 		this.etiquetas = etiquetas;
 	}
-	//TODO En proceso
+	//Done
 	public ArrayList<Comentario> getComentarios() {
 		return comentarios;
 	}
-	//TODO En proceso
+	//Done
 	public void setComentarios(ArrayList<Comentario> comentarios) {
 		this.comentarios = comentarios;
 	}
