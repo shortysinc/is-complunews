@@ -184,6 +184,8 @@ public class Vista {
 
 
 
-
+	public void changePreferences(){
+		this.controller.cambiarPreferencias();
+	}
 
 }
