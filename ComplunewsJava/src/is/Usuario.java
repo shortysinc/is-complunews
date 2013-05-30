@@ -24,7 +24,15 @@ public class Usuario implements UsuarioDao
     }
     
 	public String getPass(){
-	return this.contrasena;
+		return this.contrasena;
+	}
+
+	/**
+	 * Metodo creado para pruebas.
+	 * @param pass
+	 */
+	public void setPass(String pass){
+		this.contrasena = pass;
 	}
 	@Override
 	public ArrayList<Noticia> buscarNoticiaPorTitulo(String titulo) {
