@@ -12,8 +12,8 @@ import org.junit.runners.Suite;
 						DatosTest.class,
 						EtiquetasTest.class,
 						NoticiaTest.class,
-						UsuarioNoRegTest.class,
-						UsuarioRegTest.class,
+						//UsuarioNoRegTest.class,
+						//UsuarioRegTest.class,
 						UsuarioTest.class,
 						
 					} ) 
