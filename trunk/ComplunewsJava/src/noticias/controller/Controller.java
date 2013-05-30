@@ -215,6 +215,14 @@ public class Controller implements IObserver {
 		this.model.borrarNoticia(noticia);
 	}
 
+	public void showComments(){
+
+		this.model.showComments();
+	}
+	
+	public void cambiarPreferencias(){
+		this.model.cambiarPreferencias();
+	}
 
 
 }
