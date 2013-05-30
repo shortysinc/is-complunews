@@ -1,5 +1,5 @@
 package FactoryDao.testValidador;
-//No se sabe si hay que hacer Test
+//Sin Test
 import static org.junit.Assert.*;
 
 import org.junit.Before;
